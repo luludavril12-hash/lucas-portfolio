@@ -1,14 +1,327 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Lucas Davril – Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucas Davril — Portfolio</title>
+  <meta name="description" content="Portfolio — Marketing, E-commerce, Influence, Branding, Analytics." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <div class="bg-noise" aria-hidden="true"></div>
 
-  <h1>Lucas Davril</h1>
-  <p>Marketing • E-commerce • Influence</p>
+  <header class="topbar">
+    <a class="brand" href="#home" data-tab="home" aria-label="Aller à l'accueil">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Lucas Davril</span>
+    </a>
 
+    <nav class="nav" aria-label="Navigation principale">
+      <button class="navlink active" data-tab="home" aria-current="page">Accueil</button>
+      <button class="navlink" data-tab="marketing">Marketing</button>
+      <button class="navlink" data-tab="ecommerce">E-commerce</button>
+      <button class="navlink" data-tab="influence">Influence</button>
+      <button class="navlink" data-tab="branding">Branding</button>
+      <button class="navlink" data-tab="analytics">Analytics</button>
+      <button class="navlink" data-tab="contact">Contact</button>
+    </nav>
+
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="wrap">
+    <!-- HOME -->
+    <section class="panel active" id="home" data-panel="home">
+      <div class="hero">
+        <div class="kicker">
+          <span class="pill">Portfolio</span>
+          <span class="pill ghost">Lille • France</span>
+        </div>
+
+        <h1 class="title reveal">
+          Marketing, E-commerce & Influence<br />
+          <span class="muted">— stratégie + exécution + résultats.</span>
+        </h1>
+
+        <p class="lead reveal delay-1">
+          J’aide des marques à grandir grâce à une stratégie claire, du contenu performant,
+          et des collabs influenceurs bien pilotées.
+        </p>
+
+        <div class="cta reveal delay-2">
+          <a class="btn" href="#contact" data-tab="contact">Me contacter</a>
+          <a class="btn ghost" href="#marketing" data-tab="marketing">Voir mes compétences</a>
+        </div>
+
+        <div class="stats reveal delay-3">
+          <div class="card">
+            <div class="cardTitle">Focus</div>
+            <div class="cardValue">Growth & brand</div>
+            <div class="cardSub">Stratégie → contenu → conversion</div>
+          </div>
+          <div class="card">
+            <div class="cardTitle">Méthode</div>
+            <div class="cardValue">Systèmes</div>
+            <div class="cardSub">Scoring, process, automatisations</div>
+          </div>
+          <div class="card">
+            <div class="cardTitle">Style</div>
+            <div class="cardValue">Premium / street</div>
+            <div class="cardSub">Branding + direction créative</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2 reveal delay-4">
+        <div class="block">
+          <h2>Projets phares</h2>
+          <ul class="list">
+            <li><span class="tag">DivinByDivin</span> Influence, contenu, drops</li>
+            <li><span class="tag">DavrilSupply</span> E-commerce, pop-ups, branding</li>
+            <li><span class="tag">Closet.Facto</span> Marketplace / revente</li>
+          </ul>
+          <p class="hint">Tu peux remplacer/ajouter tes projets quand tu veux.</p>
+        </div>
+
+        <div class="block">
+          <h2>Ce que tu trouveras ici</h2>
+          <div class="chips">
+            <span class="chip">Stratégie marketing</span>
+            <span class="chip">Campagnes & ads</span>
+            <span class="chip">Influence ops</span>
+            <span class="chip">E-commerce</span>
+            <span class="chip">Branding</span>
+            <span class="chip">KPI / dashboards</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETING -->
+    <section class="panel" id="marketing" data-panel="marketing">
+      <div class="panelHead">
+        <h2 class="reveal">Marketing</h2>
+        <p class="reveal delay-1">Positionnement, plan d’action, contenus, campagnes.</p>
+      </div>
+
+      <div class="cards3">
+        <article class="card reveal">
+          <h3>Stratégie & positionnement</h3>
+          <p>Analyse, segmentation, message, angles créatifs. Roadmap par objectifs (notoriété → conversion).</p>
+          <ul class="mini">
+            <li>Persona & insight</li>
+            <li>Calendrier de lancement (drops)</li>
+            <li>Plans de contenus</li>
+          </ul>
+        </article>
+
+        <article class="card reveal delay-1">
+          <h3>Campagnes & contenus</h3>
+          <p>Concepts, hooks, scripts, UGC, formats courts. Optimisation itérative.</p>
+          <ul class="mini">
+            <li>Reels / TikTok / shorts</li>
+            <li>Copywriting</li>
+            <li>CTA & pages</li>
+          </ul>
+        </article>
+
+        <article class="card reveal delay-2">
+          <h3>Organisation</h3>
+          <p>Méthodes simples mais carrées : brief, planning, checklists, suivi.</p>
+          <ul class="mini">
+            <li>Process</li>
+            <li>Templates</li>
+            <li>Qualité & cohérence</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ECOMMERCE -->
+    <section class="panel" id="ecommerce" data-panel="ecommerce">
+      <div class="panelHead">
+        <h2 class="reveal">E-commerce</h2>
+        <p class="reveal delay-1">Fiches produit, SEO, conversion, expérience d’achat.</p>
+      </div>
+
+      <div class="grid2">
+        <article class="block reveal">
+          <h3>Conversion (CRO)</h3>
+          <ul class="list">
+            <li>Structure page produit & réassurance</li>
+            <li>Upsell / cross-sell</li>
+            <li>Panier & checkout (frictions)</li>
+          </ul>
+        </article>
+
+        <article class="block reveal delay-1">
+          <h3>Contenu & SEO</h3>
+          <ul class="list">
+            <li>Titles, meta, alt, maillage interne</li>
+            <li>Pages collections optimisées</li>
+            <li>Guides / articles (si besoin)</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout reveal delay-2">
+        <div>
+          <h3>Approche “test & learn”</h3>
+          <p>Je préfère les améliorations rapides, mesurées, puis amplifiées quand ça marche.</p>
+        </div>
+        <div class="meter" aria-hidden="true">
+          <span style="width: 78%"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFLUENCE -->
+    <section class="panel" id="influence" data-panel="influence">
+      <div class="panelHead">
+        <h2 class="reveal">Influence</h2>
+        <p class="reveal delay-1">Sourcing, scoring, outreach, suivi des livrables, reporting.</p>
+      </div>
+
+      <div class="cards3">
+        <article class="card reveal">
+          <h3>Sourcing & fit</h3>
+          <p>Recherche profils + cohérence avec la marque (style, audience, crédibilité).</p>
+          <ul class="mini">
+            <li>Micro → macro</li>
+            <li>Segmentation par pays</li>
+            <li>Whitelist / blacklist</li>
+          </ul>
+        </article>
+
+        <article class="card reveal delay-1">
+          <h3>Scoring</h3>
+          <p>Méthode 0–5 (fit marque, qualité contenu, engagement, audience, risques).</p>
+          <ul class="mini">
+            <li>Base Excel / Sheets</li>
+            <li>Notes & commentaires</li>
+            <li>Priorisation</li>
+          </ul>
+        </article>
+
+        <article class="card reveal delay-2">
+          <h3>Ops & suivi</h3>
+          <p>Brief, expé, deadlines, validation, repost, tracking performance.</p>
+          <ul class="mini">
+            <li>Checklist</li>
+            <li>Relances</li>
+            <li>Recap de campagne</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- BRANDING -->
+    <section class="panel" id="branding" data-panel="branding">
+      <div class="panelHead">
+        <h2 class="reveal">Branding</h2>
+        <p class="reveal delay-1">Identité, direction créative, cohérence des assets.</p>
+      </div>
+
+      <div class="grid2">
+        <article class="block reveal">
+          <h3>Direction créative</h3>
+          <p>Un style clair, reconnaissable, décliné sur tous les points de contact.</p>
+          <div class="chips">
+            <span class="chip">Moodboards</span>
+            <span class="chip">Guidelines</span>
+            <span class="chip">Shooting</span>
+            <span class="chip">Assets</span>
+          </div>
+        </article>
+
+        <article class="block reveal delay-1">
+          <h3>Storytelling</h3>
+          <p>Une marque qui se comprend en 3 secondes : message, preuves, univers.</p>
+          <div class="quote">
+            “Le détail fait pro : typographies, rythme, cohérence, ton.”
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ANALYTICS -->
+    <section class="panel" id="analytics" data-panel="analytics">
+      <div class="panelHead">
+        <h2 class="reveal">Analytics</h2>
+        <p class="reveal delay-1">KPI, dashboards, lecture performance, décisions.</p>
+      </div>
+
+      <div class="cards3">
+        <article class="card reveal">
+          <h3>KPI essentiels</h3>
+          <ul class="mini">
+            <li>Trafic, conversion, AOV</li>
+            <li>ROAS / CPA</li>
+            <li>Engagement & reach</li>
+          </ul>
+        </article>
+
+        <article class="card reveal delay-1">
+          <h3>Rapports</h3>
+          <p>Des rapports lisibles : ce qui marche, ce qui ne marche pas, et quoi faire.</p>
+          <ul class="mini">
+            <li>Recommandations actionnables</li>
+            <li>Comparaisons & tendances</li>
+            <li>Suivi par période (mois / drop)</li>
+          </ul>
+        </article>
+
+        <article class="card reveal delay-2">
+          <h3>Optimisation</h3>
+          <p>Une boucle simple : hypothèse → test → mesure → itération.</p>
+          <div class="steps">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel" id="contact" data-panel="contact">
+      <div class="panelHead">
+        <h2 class="reveal">Contact</h2>
+        <p class="reveal delay-1">On bosse ensemble ?</p>
+      </div>
+
+      <div class="contactBox reveal delay-2">
+        <div class="contactRow">
+          <div>
+            <div class="label">Email</div>
+            <a class="link" href="mailto:luludavril12@gmail.com">luludavril12@gmail.com</a>
+          </div>
+          <button class="btn small" id="copyEmail" type="button">Copier</button>
+        </div>
+
+        <div class="contactRow">
+          <div>
+            <div class="label">Réseaux</div>
+            <div class="links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Instagram</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+            <div class="hint">Remplace les # par tes vrais liens.</div>
+          </div>
+        </div>
+
+        <div class="toast" id="toast" role="status" aria-live="polite">Copié ✅</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Lucas Davril</span>
+    <span class="sep">•</span>
+    <span class="muted">Hosted on Vercel</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
