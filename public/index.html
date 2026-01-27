@@ -16,6 +16,7 @@
 
 <body>
   <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-aurora" aria-hidden="true"></div>
 
   <!-- Top nav -->
   <header class="topbar">
@@ -24,63 +25,66 @@
       <span>Lucas Davril</span>
     </a>
 
-<nav class="nav" aria-label="Navigation principale">
-  <button class="navlink active" data-tab="home" aria-current="page">Accueil</button>
-  <button class="navlink" data-tab="competences">Compétences</button>
-  <button class="navlink" data-tab="influence">Influence</button>
-  <button class="navlink" data-tab="ecommerce">E-commerce</button>
-  <button class="navlink" data-tab="ads">Ads & KPI</button>
-  <button class="navlink" data-tab="contenu">Créa</button>
-  <button class="navlink" data-tab="projects">Projets</button>
-  <button class="navlink" data-tab="contact">Contact</button>
-</nav>
+    <nav class="nav" aria-label="Navigation principale">
+      <button class="navlink active" data-tab="home" aria-current="page">Accueil</button>
+      <button class="navlink" data-tab="competences">Compétences</button>
+      <button class="navlink" data-tab="influence">Influence</button>
+      <button class="navlink" data-tab="ecommerce">E-commerce</button>
+      <button class="navlink" data-tab="ads">Ads & KPI</button>
+      <button class="navlink" data-tab="contenu">Créa</button>
+      <button class="navlink" data-tab="projects">Projets</button>
+      <button class="navlink" data-tab="contact">Contact</button>
+    </nav>
 
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
       <span></span><span></span><span></span>
     </button>
   </header>
 
   <main class="wrap">
+
     <!-- ================= HOME ================= -->
     <section class="panel active" id="home" data-panel="home">
-      <div class="hero">
-        <div class="kicker reveal">
-          <span class="pill">Portfolio</span>
-          <span class="pill ghost">Marketing • E-commerce • Influence</span>
-        </div>
+      <div class="heroCard glow">
+        <div class="heroGlow" aria-hidden="true"></div>
 
-        <h1 class="title reveal delay-1">
-          Je construis des systèmes<br />
-          <span class="accent">marketing & croissance</span><br />
-          <span class="muted">pour des marques e-commerce (streetwear).</span>
-        </h1>
-
-        <p class="lead reveal delay-2">
-          Stratégie claire, exécution rapide, suivi performance. Contenu, influence, e-commerce, KPI.
-        </p>
-
-        <div class="cta reveal delay-3">
-          <a class="btn" href="#contact" data-tab="contact">Me contacter</a>
-          <a class="btn ghost" href="#projects" data-tab="projects">Voir mes projets</a>
-        </div>
-
-        <!-- hero visual card -->
-        <div class="heroVisual reveal delay-4 glow">
-          <div class="heroGlow" aria-hidden="true"></div>
-          <div class="heroVisualTop">
-            <span class="chip">Focus</span>
-            <span class="chip ghost">Brand + Growth</span>
-            <span class="chip ghost">Ops Influence</span>
+        <div class="hero">
+          <div class="kicker reveal">
+            <span class="pill">Portfolio</span>
+            <span class="pill ghost">Marketing • E-commerce • Influence</span>
           </div>
 
-          <div class="heroVisualMain">
-            <div class="metric">
-              <div class="metricLabel">Méthode</div>
-              <div class="metricValue">Hypothèse → Test → Mesure → Itération</div>
+          <h1 class="title reveal delay-1">
+            Je construis des systèmes<br />
+            <span class="accent">marketing & croissance</span><br />
+            <span class="muted">pour des marques e-commerce (streetwear).</span>
+          </h1>
+
+          <p class="lead reveal delay-2">
+            Stratégie claire, exécution rapide, suivi performance. Contenu, influence, e-commerce, KPI.
+          </p>
+
+          <div class="cta reveal delay-3">
+            <a class="btn" href="#contact" data-tab="contact">Me contacter</a>
+            <a class="btn ghost" href="#projects" data-tab="projects">Voir mes projets</a>
+          </div>
+
+          <div class="heroVisual reveal delay-4">
+            <div class="heroVisualTop">
+              <span class="chip">Focus</span>
+              <span class="chip ghost">Brand + Growth</span>
+              <span class="chip ghost">Ops Influence</span>
             </div>
-            <div class="metric">
-              <div class="metricLabel">Deliverables</div>
-              <div class="metricValue">Plan d’action + exécution + reporting</div>
+
+            <div class="heroVisualMain">
+              <div class="metric">
+                <div class="metricLabel">Méthode</div>
+                <div class="metricValue">Hypothèse → Test → Mesure → Itération</div>
+              </div>
+              <div class="metric">
+                <div class="metricLabel">Deliverables</div>
+                <div class="metricValue">Plan d’action + exécution + reporting</div>
+              </div>
             </div>
           </div>
         </div>
@@ -88,67 +92,65 @@
 
       <!-- STATS -->
       <section class="statsRow reveal delay-4" aria-label="Chiffres clés">
-        <article class="statCard glow">
+        <article class="statCard glow hoverLift">
           <div class="statIcon">⚡️</div>
           <div class="statBig">Exécution</div>
           <div class="statSmall">rapide & structurée</div>
         </article>
 
-        <article class="statCard glow">
+        <article class="statCard glow hoverLift">
           <div class="statIcon">📈</div>
           <div class="statBig">KPI</div>
           <div class="statSmall">lecture + décisions</div>
         </article>
 
-        <article class="statCard glow">
+        <article class="statCard glow hoverLift">
           <div class="statIcon">🤝</div>
           <div class="statBig">Influence</div>
           <div class="statSmall">process & suivi</div>
         </article>
       </section>
 
-      <!-- SKILLS GRID -->
-      <section class="skillsSection reveal delay-3" id="skills">
+      <!-- FEATURE GRID (compétences style "cards") -->
+      <section class="section reveal delay-2">
         <div class="sectionHead">
           <h2 class="sectionTitle">Compétences qui font la différence</h2>
-          <p class="sectionSub">
-            Un rendu premium, lisible, et orienté action — pas un site “bullet points”.
-          </p>
+          <p class="sectionSub">Un rendu premium, lisible, et orienté action — agréable à lire.</p>
         </div>
 
-        <div class="skillsGrid" id="skillsGrid">
-          <article class="skillCard glow">
-            <div class="skillIcon">⚡️</div>
+        <div class="grid6">
+          <article class="card glow hoverLift">
+            <div class="cardIcon">⚡️</div>
             <h3>Stratégie marketing</h3>
-            <p>Positionnement, angles créatifs, calendrier de drops et plan d’action par objectifs.</p>
+            <p>Positionnement, angles créatifs, calendrier de drops, priorités et plan d’action.</p>
           </article>
 
-          <article class="skillCard glow isActive">
-            <div class="skillIcon">📊</div>
+          <article class="card glow hoverLift">
+            <div class="cardIcon">📊</div>
             <h3>Analytics & KPI</h3>
             <p>Trafic, conversion, AOV, ROAS/CPA + recommandations claires et actionnables.</p>
           </article>
 
-          <article class="skillCard glow">
-            <div class="skillIcon">🛒</div>
+          <article class="card glow hoverLift">
+            <div class="cardIcon">🛒</div>
             <h3>E-commerce & CRO</h3>
-            <p>Pages produit, réassurance, panier/checkout, optimisation conversion et panier moyen.</p>
+            <p>Pages produit, réassurance, panier/checkout, optimisation conversion & panier moyen.</p>
           </article>
 
-          <article class="skillCard glow">
-            <div class="skillIcon">🎥</div>
+          <article class="card glow hoverLift">
+            <div class="cardIcon">🎥</div>
             <h3>Contenu & storytelling</h3>
             <p>Hooks, scripts, UGC, formats courts, cohérence de marque et direction créative.</p>
           </article>
 
-          <article class="skillCard glow">
-            <div class="skillIcon">🤝</div>
+          <article class="card glow hoverLift">
+            <div class="cardIcon">🤝</div>
             <h3>Influence (ops)</h3>
             <p>Sourcing, scoring 0–5, outreach, suivi livrables, expéditions, reporting.</p>
           </article>
 
-          <article class="skillCard glow">
-            <div class="skillIcon">🧩</div>
+          <article class="card glow hoverLift">
+            <div class="cardIcon">🧩</div>
             <h3>Systèmes & process</h3>
             <p>Trackers, templates, organisation : exécution rapide, propre et répétable.</p>
           </article>
@@ -156,7 +158,7 @@
       </section>
 
       <!-- FAQ -->
-      <section class="faqSection reveal delay-4" aria-label="Questions fréquentes">
+      <section class="section reveal delay-3" aria-label="Questions fréquentes">
         <h2 class="faqTitle">Questions fréquentes</h2>
 
         <div class="faqList" id="faq">
@@ -201,19 +203,6 @@
 
           <div class="faqItem glow">
             <button class="faqQ" aria-expanded="false" type="button">
-              <span>Tu travailles avec quels outils ?</span>
-              <span class="chev" aria-hidden="true"></span>
-            </button>
-            <div class="faqA" role="region">
-              <p>
-                Sheets/Excel (scoring & reporting), Notion (process), Shopify (e-commerce),
-                Meta/TikTok/Google Ads selon besoin, Canva/Figma pour les assets.
-              </p>
-            </div>
-          </div>
-
-          <div class="faqItem glow">
-            <button class="faqQ" aria-expanded="false" type="button">
               <span>On démarre comment ?</span>
               <span class="chev" aria-hidden="true"></span>
             </button>
@@ -228,41 +217,217 @@
       </section>
     </section>
 
+    <!-- ================= COMPETENCES (page dédiée) ================= -->
+    <section class="panel" id="competences" data-panel="competences">
+      <div class="panelHead">
+        <h2 class="reveal">Compétences</h2>
+        <p class="reveal delay-1">Une vue claire de ce que je sais faire (et comment je le fais).</p>
+      </div>
+
+      <div class="twoCols">
+        <div class="col glow reveal">
+          <h3>Mon approche</h3>
+          <ul class="list">
+            <li><b>Clarté</b> : objectif → KPI → plan.</li>
+            <li><b>Vitesse</b> : on lance vite, on itère.</li>
+            <li><b>Qualité</b> : contenu + exécution propre.</li>
+            <li><b>Mesure</b> : reporting et décisions.</li>
+          </ul>
+        </div>
+
+        <div class="col glow reveal delay-1">
+          <h3>Ce que tu obtiens</h3>
+          <ul class="list">
+            <li>Plan d’action et priorités.</li>
+            <li>Templates/trackers (influence, contenu, reporting).</li>
+            <li>Optimisation e-commerce (pages, réassurance, CRO).</li>
+            <li>Recap campagne : ce qui marche + next steps.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid6 reveal delay-2">
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🧠</div>
+          <h3>Brand & positionnement</h3>
+          <p>Message, promesse, codes visuels, cohérence marque sur toutes les pages.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🧲</div>
+          <h3>Acquisition</h3>
+          <p>SEO basics, Ads (Meta/TikTok/Google), tracking et angles créatifs.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🛍️</div>
+          <h3>Conversion</h3>
+          <p>Pages produit, sections, FAQ, preuves, friction checkout, panier moyen.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">📦</div>
+          <h3>Ops</h3>
+          <p>Organisation, process, suivi, qualité d’exécution, répétabilité.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🎯</div>
+          <h3>Influence</h3>
+          <p>Scoring, outreach, briefs, livrables, repost, reporting, itérations.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🧾</div>
+          <h3>Reporting</h3>
+          <p>Lecture KPI, synthèse claire, recommandations et décisions rapides.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= INFLUENCE ================= -->
+    <section class="panel" id="influence" data-panel="influence">
+      <div class="panelHead">
+        <h2 class="reveal">Influence</h2>
+        <p class="reveal delay-1">Sourcing → scoring → outreach → suivi → reporting.</p>
+      </div>
+
+      <div class="twoCols">
+        <div class="col glow reveal">
+          <h3>Process</h3>
+          <ol class="list">
+            <li>Sourcing (fit marque/audience)</li>
+            <li>Scoring 0–5 (qualité, audience, style, cohérence)</li>
+            <li>Outreach + relances</li>
+            <li>Brief + tracking livrables</li>
+            <li>Reporting & next steps</li>
+          </ol>
+        </div>
+        <div class="col glow reveal delay-1">
+          <h3>Ce que je priorise</h3>
+          <ul class="list">
+            <li><b>Fit</b> plutôt que “gros followers”.</li>
+            <li><b>Contenu réutilisable</b> (UGC + ads possible).</li>
+            <li><b>Suivi</b> : statuts clairs, deadlines, preuves.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout reveal delay-2">
+        <div>
+          <h3>Tu veux que je te fasse un tracker influence ?</h3>
+          <p>Je peux te sortir une structure “pro” avec statuts + scoring + reporting.</p>
+        </div>
+        <a class="btn ghost" href="#contact" data-tab="contact">En parler</a>
+      </div>
+    </section>
+
+    <!-- ================= ECOMMERCE ================= -->
+    <section class="panel" id="ecommerce" data-panel="ecommerce">
+      <div class="panelHead">
+        <h2 class="reveal">E-commerce</h2>
+        <p class="reveal delay-1">Conversion, pages produit, réassurance, structure, CRO.</p>
+      </div>
+
+      <div class="grid3 reveal">
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🧱</div>
+          <h3>Pages produit</h3>
+          <p>Structure, infos clés, storytelling, size guide, FAQ, preuves.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🧾</div>
+          <h3>Réassurance</h3>
+          <p>Livraison, retours, authenticité, avis, garanties, friction reduction.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🧪</div>
+          <h3>Tests</h3>
+          <p>Hypothèses, AB tests simples, mesure, itération.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= ADS & KPI ================= -->
+    <section class="panel" id="ads" data-panel="ads">
+      <div class="panelHead">
+        <h2 class="reveal">Ads & KPI</h2>
+        <p class="reveal delay-1">Une lecture KPI simple → des décisions rapides.</p>
+      </div>
+
+      <div class="twoCols">
+        <div class="col glow reveal">
+          <h3>KPI que je suis</h3>
+          <ul class="list">
+            <li>ROI / ROAS / CPA</li>
+            <li>CTR / CPC / CPM</li>
+            <li>Taux de conversion</li>
+            <li>AOV (panier moyen)</li>
+            <li>Taux de rebond / engagement</li>
+          </ul>
+        </div>
+        <div class="col glow reveal delay-1">
+          <h3>Rendu attendu</h3>
+          <ul class="list">
+            <li>Ce qui marche / ce qui ne marche pas</li>
+            <li>3 actions prioritaires</li>
+            <li>Hypothèses de tests</li>
+            <li>Plan de la semaine</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CREA ================= -->
+    <section class="panel" id="contenu" data-panel="contenu">
+      <div class="panelHead">
+        <h2 class="reveal">Créa</h2>
+        <p class="reveal delay-1">Hooks, scripts, formats courts, direction créative.</p>
+      </div>
+
+      <div class="grid3 reveal">
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🎬</div>
+          <h3>Scripts</h3>
+          <p>Structure “Hook → Value → Proof → CTA”.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🧷</div>
+          <h3>UGC</h3>
+          <p>Briefs clairs, rendus réutilisables en ads.</p>
+        </article>
+        <article class="card glow hoverLift">
+          <div class="cardIcon">🖼️</div>
+          <h3>DA</h3>
+          <p>Coherence, typographie, rendu premium.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- ================= PROJECTS ================= -->
     <section class="panel" id="projects" data-panel="projects">
       <div class="panelHead">
         <h2 class="reveal">Projets</h2>
-        <p class="reveal delay-1">
-          Des exemples de ce que je fais : stratégie + exécution + rendu propre.
-        </p>
+        <p class="reveal delay-1">Des exemples : stratégie + exécution + rendu propre.</p>
       </div>
 
       <div class="projectsGrid">
-        <article class="projectCard glow reveal">
+        <article class="projectCard glow reveal hoverLift">
           <div class="projTop">
             <span class="pill mini">Streetwear</span>
             <span class="pill mini ghost">Influence</span>
           </div>
           <h3>DivinByDivin — Influence & contenu</h3>
-          <p>
-            Mise en place d’un process influence : sourcing, scoring, suivi livrables, organisation des envois.
-          </p>
+          <p>Mise en place d’un process influence : sourcing, scoring, suivi livrables, organisation des envois.</p>
           <ul class="projList">
-            <li>Tracker + statut campagne</li>
+            <li>Tracker + statuts campagne</li>
             <li>Briefs & relances</li>
-            <li>Recaps et contenus réutilisables</li>
+            <li>Recaps + contenus réutilisables</li>
           </ul>
         </article>
 
-        <article class="projectCard glow reveal delay-1">
+        <article class="projectCard glow reveal delay-1 hoverLift">
           <div class="projTop">
             <span class="pill mini">E-commerce</span>
             <span class="pill mini ghost">CRO</span>
           </div>
           <h3>DavrilSupply — E-commerce & conversion</h3>
-          <p>
-            Optimisation des pages (structure, réassurance, contenus) pour rendre l’achat plus fluide.
-          </p>
+          <p>Optimisation des pages (structure, réassurance, contenus) pour rendre l’achat plus fluide.</p>
           <ul class="projList">
             <li>Copywriting</li>
             <li>UX page produit</li>
@@ -270,15 +435,13 @@
           </ul>
         </article>
 
-        <article class="projectCard glow reveal delay-2">
+        <article class="projectCard glow reveal delay-2 hoverLift">
           <div class="projTop">
             <span class="pill mini">Systèmes</span>
             <span class="pill mini ghost">Data</span>
           </div>
           <h3>Scoring influence — Méthode 0–5</h3>
-          <p>
-            Système de scoring pour prioriser les profils et sécuriser le fit marque/audience.
-          </p>
+          <p>Système de scoring pour prioriser les profils et sécuriser le fit marque/audience.</p>
           <ul class="projList">
             <li>Critères pondérés</li>
             <li>Commentaires & décisions</li>
@@ -289,7 +452,7 @@
 
       <div class="callout reveal delay-3">
         <div>
-          <h3>Tu veux un rendu encore plus “case study” ?</h3>
+          <h3>Tu veux un rendu “case study” ?</h3>
           <p>Je peux transformer chaque projet en fiche : contexte → actions → résultats → preuves.</p>
         </div>
         <a class="btn ghost" href="#contact" data-tab="contact">Demander</a>
@@ -316,7 +479,6 @@
           <div>
             <div class="label">Réseaux</div>
             <div class="links">
-              <!-- Remplace les # -->
               <a class="link" href="#" target="_blank" rel="noreferrer">Instagram</a>
               <a class="link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
@@ -327,6 +489,7 @@
         <div class="toast" id="toast" role="status" aria-live="polite">Copié ✅</div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
