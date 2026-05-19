@@ -1,334 +1,389 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lucas Davril — Portfolio Marketing</title>
-  <meta name="description" content="Lucas Davril — Stratégie marketing, e-commerce, influence & KPI pour marques streetwear." />
-  <meta property="og:title" content="Lucas Davril — Portfolio" />
-  <meta property="og:description" content="Marketing · E-commerce · Influence · Analytics" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Lucas Davril — Portfolio Marketing</title>
+<meta name="description" content="Lucas Davril — Marketing, E-commerce, Influence. Portfolio BUT TC Lille."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- Scroll progress -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="sp" id="sp"></div>
 
-  <!-- Background atmosphere -->
-  <div class="bg-noise" aria-hidden="true"></div>
-  <div class="orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="orb orb-4"></div>
+<!-- Background -->
+<div class="mesh" aria-hidden="true">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="blob b4"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <button class="logo" data-tab="home">
+    <span class="logo-dot"></span>
+    Lucas Davril
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <button class="nl active" data-tab="home">Accueil</button>
+    <button class="nl" data-tab="competences">Compétences</button>
+    <button class="nl" data-tab="influence">Influence</button>
+    <button class="nl" data-tab="ecommerce">E-commerce</button>
+    <button class="nl" data-tab="ads">Ads & KPI</button>
+    <button class="nl" data-tab="crea">Créa</button>
+    <button class="nl" data-tab="projects">Projets</button>
+    <button class="nl" data-tab="contact">Contact</button>
+  </nav>
+  <button class="burger" id="burger" aria-expanded="false" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main class="wrap">
+
+<!-- ========== HOME ========== -->
+<section class="panel active" id="home" data-panel="home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-l">
+      <div class="hero-tags reveal">
+        <span class="tag">BUT TC · 2025</span>
+        <span class="tag ghost">Lille, France</span>
+      </div>
+      <h1 class="hero-title reveal d1">
+        Je construis<br/>
+        <span class="gtext">des systèmes</span><br/>
+        marketing.
+      </h1>
+      <p class="hero-sub reveal d2">
+        Influence · E-commerce · Ads · Contenu.<br/>
+        Du concret, pas des slides.
+      </p>
+      <div class="hero-cta reveal d3">
+        <button class="btn" data-tab="projects">Voir mes projets</button>
+        <button class="btn-o" data-tab="contact">Me contacter</button>
+      </div>
+    </div>
+
+    <!-- Floating widgets -->
+    <div class="hero-r reveal d1">
+      <div class="fw fw1 glass">
+        <div class="fw-v gtext">+350K€</div>
+        <div class="fw-l">CA généré · Vinted</div>
+        <span class="ftag">E-commerce</span>
+      </div>
+      <div class="fw fw2 glass">
+        <div class="fw-v gtext">2,3M+</div>
+        <div class="fw-l">vues/mois · Pinterest</div>
+        <span class="ftag teal">Organique</span>
+      </div>
+      <div class="fw fw3 glass">
+        <div class="fw-v">10,7K</div>
+        <div class="fw-l">likes · @divinbydivin</div>
+        <span class="ftag purple">Créa</span>
+      </div>
+      <div class="fw fw4 glass">
+        <div class="fw-ico">🌍</div>
+        <div class="fw-l">UK · Chine · Japon · Philippines</div>
+        <span class="ftag">Sourcing</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Cursor glow -->
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <!-- STAT STRIP -->
+  <div class="stats reveal d2">
+    <div class="stat glass"><span class="sv gtext">+350K€</span><span class="sl">CA Vinted</span></div>
+    <div class="stat glass"><span class="sv gtext">2,3M+</span><span class="sl">vues Pinterest/mois</span></div>
+    <div class="stat glass"><span class="sv">5+</span><span class="sl">pays fournisseurs</span></div>
+    <div class="stat glass"><span class="sv">10,7K</span><span class="sl">likes organique</span></div>
+  </div>
 
-  <!-- TOPBAR -->
-  <header class="topbar" role="banner">
-    <button class="brand" data-tab="home" aria-label="Accueil">
-      <span class="dot" aria-hidden="true"></span>
-      <span>Lucas Davril</span>
-    </button>
-    <nav class="nav" id="mainNav" aria-label="Navigation principale">
-      <button class="navlink active" data-tab="home"        aria-current="page">Accueil</button>
-      <button class="navlink"        data-tab="competences">Compétences</button>
-      <button class="navlink"        data-tab="influence"  >Influence</button>
-      <button class="navlink"        data-tab="ecommerce"  >E-commerce</button>
-      <button class="navlink"        data-tab="ads"        >Ads & KPI</button>
-      <button class="navlink"        data-tab="contenu"    >Créa</button>
-      <button class="navlink"        data-tab="projects"   >Projets</button>
-      <button class="navlink"        data-tab="contact"    >Contact</button>
-    </nav>
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
+  <!-- HOW I WORK -->
+  <div class="slabel reveal">Comment je travaille</div>
+  <h2 class="stitle reveal d1">Une méthode simple,<br/><span class="gtext">orientée résultats.</span></h2>
+  <p class="ssub reveal d2">Stratégie + exécution + mesure pour faire croître des marques e-commerce.</p>
 
-  <main class="wrap" id="main">
+  <div class="how-grid">
+    <div class="hw glass reveal d1">
+      <div class="hw-n gtext">01</div>
+      <h3>Produit & marque</h3>
+      <p>J'analyse l'univers, l'audience et l'objectif. Tout commence par un <strong>fit marque ↔ client ↔ produit</strong>.</p>
+    </div>
+    <div class="hw glass reveal d2">
+      <div class="hw-n gtext">02</div>
+      <h3>Système marketing</h3>
+      <p>Je construis une machine : <strong>contenu + influence + e-commerce + process</strong>. Tout est clair, suivi, optimisé.</p>
+    </div>
+    <div class="hw glass reveal d3">
+      <div class="hw-n gtext">03</div>
+      <h3>Attention → Ventes</h3>
+      <p>J'optimise ce qui compte : <strong>UGC, pages produit, conversion, AOV</strong>. Toujours avec un <strong>next step</strong>.</p>
+    </div>
+  </div>
+  <div class="crow reveal d3">
+    <button class="btn-o" data-tab="projects">Voir des projets</button>
+    <button class="btn" data-tab="contact">Travailler ensemble</button>
+  </div>
 
-    <!-- ==================== HOME ==================== -->
-    <section class="panel active" id="home" data-panel="home">
-      <div class="hero">
-        <div class="kicker reveal">
-          <span class="pill">Portfolio BUT TC</span>
-          <span class="pill ghost">Marketing · E-commerce · Influence</span>
-        </div>
-        <h1 class="title reveal delay-1">
-          Je construis des<br />
-          <em class="accent">systèmes marketing</em><br />
-          <span class="muted">qui font croître des marques.</span>
-        </h1>
-        <p class="lead reveal delay-2">
-          Stratégie claire, exécution rapide, suivi performance.<br />
-          Contenu, influence, e-commerce, KPI — du concret à chaque étape.
-        </p>
-        <div class="cta reveal delay-3">
-          <button class="btn magnetic" data-tab="projects">Voir mes projets</button>
-          <button class="btn ghost magnetic" data-tab="contact">Me contacter</button>
-        </div>
-        <div class="heroVisual reveal delay-4 glow tilt-card">
-          <div class="heroGlow" aria-hidden="true"></div>
-          <div class="heroVisualTop">
-            <span class="chip">Focus</span>
-            <span class="chip ghost">Brand + Growth</span>
-            <span class="chip ghost">Ops Influence</span>
-          </div>
-          <div class="heroVisualMain">
-            <div class="metric"><div class="metricLabel">Méthode</div><div class="metricValue">Hypothèse → Test → Mesure → Itération</div></div>
-            <div class="metric"><div class="metricLabel">Livrables</div><div class="metricValue">Plan d'action + exécution + reporting</div></div>
-          </div>
-        </div>
-      </div>
+  <!-- SKILLS -->
+  <div class="slabel reveal" style="margin-top:52px">Domaines</div>
+  <div class="sk-grid">
+    <div class="sk glass reveal"><span class="sk-ico">🧭</span><h3>Stratégie</h3><p>Positionnement, drops, plan d'action orienté objectifs.</p></div>
+    <div class="sk glass reveal d1 sk-active"><span class="sk-ico">📊</span><h3>Analytics & KPI</h3><p>ROAS, CPA, CVR — recommandations actionnables.</p></div>
+    <div class="sk glass reveal d2"><span class="sk-ico">🛒</span><h3>E-commerce</h3><p>+350K€ CA Vinted, sourcing mondial, IA.</p></div>
+    <div class="sk glass reveal"><span class="sk-ico">🎥</span><h3>Créa iPhone</h3><p>Photo/vidéo, hooks, Reels, TikTok, direction créative.</p></div>
+    <div class="sk glass reveal d1"><span class="sk-ico">🤝</span><h3>Influence</h3><p>Sourcing, scoring 0–5, outreach, suivi, reporting.</p></div>
+    <div class="sk glass reveal d2"><span class="sk-ico">📌</span><h3>Ads Pinterest</h3><p>Paid + organique. 2,3M vues/mois, bon ROAS.</p></div>
+  </div>
+  <div class="crow reveal d2"><button class="btn-o" data-tab="competences">Voir toutes les compétences</button></div>
 
-      <!-- HOW I WORK -->
-      <section class="howWrap" aria-label="Comment je travaille">
-        <div class="howHead reveal">
-          <span class="pill ghost">Comment je travaille</span>
-          <h2 class="howTitle">Une méthode simple,<br />orientée résultats.</h2>
-          <p class="howSub">Je relie stratégie & exécution pour aider des marques e-commerce à grandir.</p>
-        </div>
-        <div class="howGrid">
-          <article class="howCard glow tilt-card reveal delay-1">
-            <div class="howNum" aria-hidden="true">1</div>
-            <div class="howCardInner">
-              <h3>Produit & marque</h3>
-              <p>J'analyse l'univers, l'audience et l'objectif. Chaque action commence par un <strong>fit marque ↔ client ↔ produit</strong>.</p>
-            </div>
-          </article>
-          <article class="howCard glow tilt-card reveal delay-2">
-            <div class="howNum" aria-hidden="true">2</div>
-            <div class="howCardInner">
-              <h3>Système marketing</h3>
-              <p>Une machine : <strong>contenu + influence + e-commerce + process</strong>. Tout clair, suivi et optimisé dans le temps.</p>
-            </div>
-          </article>
-          <article class="howCard glow tilt-card reveal delay-3">
-            <div class="howNum" aria-hidden="true">3</div>
-            <div class="howCardInner">
-              <h3>Attention → Ventes</h3>
-              <p>J'optimise ce qui compte : <strong>UGC, pages produit, conversion, AOV</strong>. Je conclus toujours par un <strong>next step</strong>.</p>
-            </div>
-          </article>
-        </div>
-        <div class="howCta reveal delay-4">
-          <button class="btn ghost magnetic" data-tab="projects">Voir des projets</button>
-          <button class="btn magnetic"       data-tab="contact" >Travailler ensemble</button>
-        </div>
-      </section>
+  <!-- FAQ -->
+  <div class="slabel reveal" style="margin-top:52px">FAQ</div>
+  <h2 class="stitle reveal d1" style="text-align:center">Questions fréquentes</h2>
+  <div class="faq-list" style="margin-top:20px">
+    <div class="fi glass reveal"><button class="fq"><span>Tu fais plutôt stratégie ou exécution ?</span><span class="fchev"></span></button><div class="fa"><p>Les deux. Je pars d'une stratégie simple, puis j'exécute : contenu, influence, e-commerce, optimisation. Résultat : du concret, pas des slides.</p></div></div>
+    <div class="fi glass reveal d1"><button class="fq"><span>Tu peux gérer une campagne influence de A à Z ?</span><span class="fchev"></span></button><div class="fa"><p>Oui : sourcing, scoring, outreach, négociation, briefs, envois, deadlines, repost et reporting final. Tout est suivi avec un tracker clair.</p></div></div>
+    <div class="fi glass reveal d2"><button class="fq"><span>Comment tu mesures si ça marche ?</span><span class="fchev"></span></button><div class="fa"><p>KPI utiles : trafic, conversion, AOV, ROAS/CPA, reach/engagement. Je conclus toujours par "prochaine action".</p></div></div>
+    <div class="fi glass reveal d3"><button class="fq"><span>On démarre comment ?</span><span class="fchev"></span></button><div class="fa"><p>Tu m'envoies objectif + produit + timing. Je réponds avec priorités + livrables + première action.</p></div></div>
+  </div>
+</section>
 
-      <!-- STATS -->
-      <section class="statsRow reveal delay-2">
-        <article class="statCard glow tilt-card"><div class="statIcon">⚡️</div><div class="statBig">Exécution</div><div class="statSmall">rapide & structurée</div></article>
-        <article class="statCard glow tilt-card"><div class="statIcon">📈</div><div class="statBig">KPI</div><div class="statSmall">lecture + décisions</div></article>
-        <article class="statCard glow tilt-card"><div class="statIcon">🤝</div><div class="statBig">Influence</div><div class="statSmall">process & suivi</div></article>
-      </section>
+<!-- ========== COMPETENCES ========== -->
+<section class="panel" id="competences" data-panel="competences">
+  <div class="ph"><h2 class="reveal">Compétences</h2><p class="reveal d1">Un profil complet — stratégie, exécution, mesure.</p></div>
+  <div class="comp-grid">
+    <div class="cc glass reveal"><div class="cct"><span class="cc-ico">🧭</span><div><h3>Stratégie & positionnement</h3><p class="ccs">Message clair, plan d'action.</p></div></div><div class="cc-tags"><span class="ctag">Lancement / drops</span><span class="ctag">Proposition de valeur</span><span class="ctag">Calendrier éditorial</span></div></div>
+    <div class="cc glass reveal d1"><div class="cct"><span class="cc-ico">📊</span><div><h3>Analyse & dashboards</h3><p class="ccs">Lecture KPI → actions.</p></div></div><div class="cc-tags"><span class="ctag">ROAS / CPA / CTR</span><span class="ctag">Conversion & AOV</span><span class="ctag">Insights actionnables</span></div></div>
+    <div class="cc glass reveal d2"><div class="cct"><span class="cc-ico">🛒</span><div><h3>E-commerce & sourcing</h3><p class="ccs">Achat-revente, stock, IA.</p></div></div><div class="cc-tags"><span class="ctag hl">+350K€ CA Vinted</span><span class="ctag">UK · Chine · Japon</span><span class="ctag">SAV automatisé IA</span></div></div>
+    <div class="cc glass reveal"><div class="cct"><span class="cc-ico">🎥</span><div><h3>Créa & storytelling</h3><p class="ccs">Photo, vidéo iPhone.</p></div></div><div class="cc-tags"><span class="ctag">Reels · TikTok · Stories</span><span class="ctag">Direction artistique</span><span class="ctag hl">Posts 10K+ likes</span></div></div>
+    <div class="cc glass reveal d1"><div class="cct"><span class="cc-ico">🤝</span><div><h3>Influence marketing</h3><p class="ccs">Du sourcing au reporting.</p></div></div><div class="cc-tags"><span class="ctag">Scoring 0–5</span><span class="ctag">Pipeline & livrables</span><span class="ctag">Briefs & relances</span></div></div>
+    <div class="cc glass reveal d2"><div class="cct"><span class="cc-ico">📌</span><div><h3>Ads & Pinterest</h3><p class="ccs">Paid & organique.</p></div></div><div class="cc-tags"><span class="ctag">Pinterest Paid — bon ROAS</span><span class="ctag hl">2,3M+ vues/mois</span><span class="ctag">Trafic → site web</span></div></div>
+  </div>
+  <div class="callout glass reveal d3"><div><h3>Un profil orienté résultats</h3><p>Chaque compétence est liée à un projet concret — stratégie, exécution, livrables réels.</p></div><button class="btn" data-tab="projects">Voir les projets</button></div>
+</section>
 
-      <!-- SKILLS PREVIEW -->
-      <section class="skillsSection">
-        <div class="sectionHead reveal">
-          <h2 class="sectionTitle">Compétences qui font la différence</h2>
-          <p class="sectionSub">Marketing opérationnel, analytics, e-commerce, influence — un profil complet et actionnable.</p>
-        </div>
-        <div class="skillsGrid">
-          <article class="skillCard glow tilt-card reveal"><div class="skillIcon">🧭</div><h3>Stratégie marketing</h3><p>Positionnement, angles créatifs, calendrier de drops et plan d'action par objectifs.</p></article>
-          <article class="skillCard glow tilt-card reveal delay-1 isActive"><div class="skillIcon">📊</div><h3>Analytics & KPI</h3><p>Trafic, conversion, AOV, ROAS/CPA + recommandations claires et actionnables.</p></article>
-          <article class="skillCard glow tilt-card reveal delay-2"><div class="skillIcon">🛒</div><h3>E-commerce</h3><p>Achat-revente Vinted, +350K€ CA, sourcing mondial, automatisation IA, gestion stock.</p></article>
-          <article class="skillCard glow tilt-card reveal delay-1"><div class="skillIcon">🎥</div><h3>Créa & contenu</h3><p>Photo vidéo iPhone, hooks, scripts, UGC, direction créative pour Instagram & TikTok.</p></article>
-          <article class="skillCard glow tilt-card reveal delay-2"><div class="skillIcon">🤝</div><h3>Influence (ops)</h3><p>Sourcing, scoring 0–5, outreach, suivi livrables, expéditions, reporting.</p></article>
-          <article class="skillCard glow tilt-card reveal delay-3"><div class="skillIcon">🧩</div><h3>Systèmes & process</h3><p>Trackers, automatisation IA, templates — exécution rapide et répétable.</p></article>
-        </div>
-        <div class="subCtaRow reveal delay-2">
-          <button class="btn ghost magnetic" data-tab="competences">Voir toutes les compétences</button>
-        </div>
-      </section>
+<!-- ========== INFLUENCE ========== -->
+<section class="panel" id="influence" data-panel="influence">
+  <div class="ph"><h2 class="reveal">Influence</h2><p class="reveal d1">Process complet : profils → sélection → deal → envois → livrables → reporting.</p></div>
+  <h3 class="subh reveal">Influenceurs & activations</h3>
+  <p class="subp reveal d1">Campagnes gérées pour DivinByDivin — sourcing, brief, envoi, UGC.</p>
+  <div class="ig">
+    <figure class="ic glass reveal"><img src="/images/influence/influ1.jpg" alt="Malik Benthalla" loading="lazy"/><figcaption><span class="iname">Malik Benthalla</span><span class="itag">Blue OG Knit</span></figcaption></figure>
+    <figure class="ic glass reveal d1"><img src="/images/influence/influ2.jpg" alt="MC Solaar" loading="lazy"/><figcaption><span class="iname">MC Solaar</span><span class="itag">Ice Fluff Knit</span></figcaption></figure>
+    <figure class="ic glass reveal d2"><img src="/images/influence/influ3.jpg" alt="Ben PLG" loading="lazy"/><figcaption><span class="iname">Ben PLG</span><span class="itag">Ice Fluff Knit</span></figcaption></figure>
+    <figure class="ic glass reveal"><img src="/images/influence/influ4.jpg" alt="Ahmed Sylla" loading="lazy"/><figcaption><span class="iname">Ahmed Sylla</span><span class="itag">Quartz Fluff Knit</span></figcaption></figure>
+    <figure class="ic glass reveal d1"><img src="/images/influence/influ5.jpg" alt="Redouane Bougheraba" loading="lazy"/><figcaption><span class="iname">Redouane Bougheraba</span><span class="itag">Kodiak Fluff Knit</span></figcaption></figure>
+    <figure class="ic glass reveal d2"><img src="/images/influence/influ6.jpg" alt="Gotaga" loading="lazy"/><figcaption><span class="iname">Gotaga</span><span class="itag">Kodiak Fluff Knit</span></figcaption></figure>
+  </div>
+  <h3 class="subh reveal" style="margin-top:32px">Process complet</h3>
+  <div class="proc glass reveal d1" id="processBar">
+    <div class="ps"><div class="pi">🔎</div><div><div class="pt">Profils</div><div class="pd">Niche, style, fit</div></div></div>
+    <div class="pa">→</div>
+    <div class="ps"><div class="pi">✅</div><div><div class="pt">Sélection</div><div class="pd">Scoring 0–5</div></div></div>
+    <div class="pa">→</div>
+    <div class="ps"><div class="pi">🤝</div><div><div class="pt">Deal</div><div class="pd">Brief, deadlines</div></div></div>
+    <div class="pa">→</div>
+    <div class="ps"><div class="pi">📦</div><div><div class="pt">Envois</div><div class="pd">Tracking</div></div></div>
+    <div class="pa">→</div>
+    <div class="ps"><div class="pi">🎥</div><div><div class="pt">Livrables</div><div class="pd">UGC, stories</div></div></div>
+    <div class="pa">→</div>
+    <div class="ps"><div class="pi">📊</div><div><div class="pt">Reporting</div><div class="pd">Résultats</div></div></div>
+  </div>
+  <div class="twoc" style="margin-top:16px">
+    <div class="glass col reveal d1">
+      <h3>Pipeline opérationnel</h3>
+      <div class="steps">
+        <div class="step"><div class="sn">01</div><div><div class="st">Sourcing & shortlist</div><div class="sx">Recherche par niche, style, pays, fit produit.</div></div></div>
+        <div class="step"><div class="sn">02</div><div><div class="st">Scoring (0–5)</div><div class="sx">Alignement marque + audience + perf + contenu.</div></div></div>
+        <div class="step"><div class="sn">03</div><div><div class="st">Outreach & suivi</div><div class="sx">Relances, conditions, brief, deadlines.</div></div></div>
+        <div class="step"><div class="sn">04</div><div><div class="st">Expédition & livrables</div><div class="sx">Tracking, UGC, repost, conformité brief.</div></div></div>
+      </div>
+    </div>
+    <div class="glass col reveal d2">
+      <h3>Ce que tu reçois</h3>
+      <div class="dg">
+        <div class="dc"><div class="dtop"><span class="badge">Template</span></div><div class="dtit">Tracker campagne</div><p>Statuts, dates, KPIs.</p></div>
+        <div class="dc"><div class="dtop"><span class="badge">Brief</span></div><div class="dtit">Brief créateur</div><p>Hook, guidelines, CTA.</p></div>
+        <div class="dc"><div class="dtop"><span class="badge teal">UGC</span></div><div class="dtit">Contenus réutilisables</div><p>Ads, stories, repost.</p></div>
+        <div class="dc"><div class="dtop"><span class="badge teal">Report</span></div><div class="dtit">Reporting final</div><p>Résultats + next steps.</p></div>
+      </div>
+      <div class="crow" style="margin-top:16px;justify-content:flex-start">
+        <button class="btn" data-tab="contact">Me contacter</button>
+        <button class="btn-o" data-tab="projects">Exemples</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- FAQ -->
-      <section class="faqSection">
-        <h2 class="faqTitle reveal">Questions fréquentes</h2>
-        <div class="faqList" id="faq">
-          <div class="faqItem glow reveal"><button class="faqQ" aria-expanded="false" type="button"><span>Tu fais plutôt stratégie ou exécution ?</span><span class="chev"></span></button><div class="faqA"><p>Les deux. Je pars d'une stratégie simple (objectif → audience → message → canal), puis j'exécute : contenu, influence, e-commerce, optimisation. Résultat : du concret, pas des slides.</p></div></div>
-          <div class="faqItem glow reveal delay-1"><button class="faqQ" aria-expanded="false" type="button"><span>Tu peux gérer une campagne influence de A à Z ?</span><span class="chev"></span></button><div class="faqA"><p>Oui : sourcing, scoring, outreach, négociation, briefs, envois, deadlines, repost et reporting final. Tout est suivi avec un tracker clair.</p></div></div>
-          <div class="faqItem glow reveal delay-2"><button class="faqQ" aria-expanded="false" type="button"><span>Comment tu mesures si ça marche ?</span><span class="chev"></span></button><div class="faqA"><p>KPI utiles : trafic, conversion, AOV, ROAS/CPA, reach/engagement. Je conclus toujours par "prochaine action" — pas juste un chiffre.</p></div></div>
-          <div class="faqItem glow reveal delay-3"><button class="faqQ" aria-expanded="false" type="button"><span>On démarre comment ?</span><span class="chev"></span></button><div class="faqA"><p>Tu m'envoies ton objectif + ton produit + ton timing. Je réponds avec un plan simple : priorités + livrables + première action à lancer.</p></div></div>
-        </div>
-      </section>
-    </section>
+<!-- ========== E-COMMERCE ========== -->
+<section class="panel" id="ecommerce" data-panel="ecommerce">
+  <div class="ph"><h2 class="reveal">E-commerce</h2><p class="reveal d1">Achat-revente Vinted · sourcing mondial · stock local · automatisation IA.</p></div>
+  <div class="eco-kpis">
+    <div class="ek glass reveal"><div class="ekv gtext">+350K€</div><div class="ekl">CA généré · Vinted</div></div>
+    <div class="ek glass reveal d1"><div class="ekv gtext">5+</div><div class="ekl">Pays fournisseurs</div></div>
+    <div class="ek glass reveal d2"><div class="ekv">Local</div><div class="ekl">Stock dédié</div></div>
+    <div class="ek glass reveal d3"><div class="ekv">IA</div><div class="ekl">SAV automatisé</div></div>
+  </div>
+  <div class="twoc" style="margin-top:16px">
+    <div class="glass col reveal d1">
+      <h3>Ce que je gère</h3>
+      <div class="steps">
+        <div class="step"><div class="sn">01</div><div><div class="st">Sourcing international</div><div class="sx">UK, Philippines, Chine, Japon, France — rencontres physiques fournisseurs.</div></div></div>
+        <div class="step"><div class="sn">02</div><div><div class="st">Analyse du marché</div><div class="sx">Tendances, produits à fort potentiel, pricing compétitif.</div></div></div>
+        <div class="step"><div class="sn">03</div><div><div class="st">Gestion du stock</div><div class="sx">Local dédié, organisation des entrées/sorties, rotation.</div></div></div>
+        <div class="step"><div class="sn">04</div><div><div class="st">Commandes & SAV IA</div><div class="sx">Automatisation IA des réponses récurrentes.</div></div></div>
+      </div>
+    </div>
+    <div class="glass col reveal d2">
+      <h3>Résultats</h3>
+      <div class="dg">
+        <div class="dc"><div class="dtop"><span class="badge hl">+350K€</span></div><div class="dtit">Chiffre d'affaires</div><p>CA total via Vinted.</p></div>
+        <div class="dc"><div class="dtop"><span class="badge">IA</span></div><div class="dtit">SAV automatisé</div><p>Réponses IA récurrentes.</p></div>
+        <div class="dc"><div class="dtop"><span class="badge">Sourcing</span></div><div class="dtit">Réseau fournisseurs</div><p>UK · Philippines · Chine · Japon</p></div>
+        <div class="dc"><div class="dtop"><span class="badge teal">Stock</span></div><div class="dtit">Local dédié</div><p>Gestion & expéditions.</p></div>
+      </div>
+      <div class="crow" style="margin-top:16px;justify-content:flex-start">
+        <button class="btn" data-tab="contact">Me contacter</button>
+        <button class="btn-o" data-tab="projects">Projets</button>
+      </div>
+    </div>
+  </div>
+  <div class="feat-grid" style="margin-top:16px">
+    <div class="fc glass reveal"><div class="fic">🌍</div><h3>Sourcing mondial</h3><p>Contact direct avec fournisseurs sur 5 continents — rencontres physiques et négociation long terme.</p><ul class="flist"><li>UK · Philippines · Chine · Japon</li><li>Relations durables</li><li>Négociation & conditions</li></ul></div>
+    <div class="fc glass reveal d1"><div class="fic">🤖</div><h3>Automatisation IA</h3><p>SAV automatisé par IA pour les questions récurrentes — gain de temps massif.</p><ul class="flist"><li>Réponses automatiques</li><li>Personnalisation messages</li><li>Gestion des litiges</li></ul></div>
+    <div class="fc glass reveal d2"><div class="fic">📦</div><h3>Stock & logistique</h3><p>Local dédié, organisation rigoureuse, suivi et rotation des articles en temps réel.</p><ul class="flist"><li>Local de stockage</li><li>Inventaire & tracking</li><li>Expédition & suivi</li></ul></div>
+  </div>
+</section>
 
-    <!-- ==================== COMPETENCES ==================== -->
-    <section class="panel" id="competences" data-panel="competences">
-      <div class="panelHead">
-        <div><h2 class="reveal">Compétences</h2><p class="reveal delay-1">Un profil complet — stratégie, exécution, mesure.</p></div>
+<!-- ========== ADS ========== -->
+<section class="panel" id="ads" data-panel="ads">
+  <div class="ph"><h2 class="reveal">Ads & KPI</h2><p class="reveal d1">Pinterest paid & organique — pilotage data, décisions actionnables.</p></div>
+  <div class="pin-banner glass reveal d1">
+    <div class="pin-l">
+      <span class="pin-tag">Pinterest</span>
+      <h3>Compte organique Pinterest</h3>
+      <p>Croissance organique sur des produits ciblés, avec redirection directe vers site web — sans budget publicitaire.</p>
+    </div>
+    <div class="pin-stats">
+      <div class="pin-s"><div class="pin-v gtext">2,3M+</div><div class="pin-l2">vues / mois</div></div>
+      <div class="pin-s"><div class="pin-v">Paid</div><div class="pin-l2">bon ROAS</div></div>
+      <div class="pin-s"><div class="pin-v">↗</div><div class="pin-l2">trafic site</div></div>
+    </div>
+  </div>
+  <div class="twoc" style="margin-top:16px">
+    <div class="glass col reveal d1">
+      <h3>Indicateurs que je suis</h3>
+      <div class="kpi-g">
+        <div class="kc glass"><div class="kn">ROAS</div><div class="kd">Rentabilité</div><div class="kf">CA ÷ Dépenses</div></div>
+        <div class="kc glass"><div class="kn">CPA</div><div class="kd">Coût / conv.</div><div class="kf">Dépenses ÷ Conv.</div></div>
+        <div class="kc glass"><div class="kn">CTR</div><div class="kd">Qualité créa</div><div class="kf">Clics ÷ Impressions</div></div>
+        <div class="kc glass"><div class="kn">CVR</div><div class="kd">Conversion site</div><div class="kf">Achats ÷ Sessions</div></div>
       </div>
-      <div class="compGrid">
-        <article class="compCard glow tilt-card reveal"><div class="compTop"><div class="compIcon">🧭</div><div><h3>Stratégie & positionnement</h3><p class="compSub">Message clair, angle créatif, plan d'action.</p></div></div><ul class="compList"><li><span class="compTag">Plan de lancement / drops</span></li><li><span class="compTag">Proposition de valeur</span></li><li><span class="compTag">Calendrier & rythme éditorial</span></li></ul></article>
-        <article class="compCard glow tilt-card reveal delay-1"><div class="compTop"><div class="compIcon">📊</div><div><h3>Analyse & dashboards</h3><p class="compSub">Lecture KPI → conclusions → actions.</p></div></div><ul class="compList"><li><span class="compTag">ROAS / CPA / CTR</span></li><li><span class="compTag">Conversion & AOV</span></li><li><span class="compTag">Insights actionnables</span></li></ul></article>
-        <article class="compCard glow tilt-card reveal delay-2"><div class="compTop"><div class="compIcon">🛒</div><div><h3>E-commerce & sourcing</h3><p class="compSub">Achat-revente, stock, automatisation IA.</p></div></div><ul class="compList"><li><span class="compTag">+350K€ CA Vinted</span></li><li><span class="compTag">Sourcing UK · Chine · Japon</span></li><li><span class="compTag">Automatisation SAV IA</span></li></ul></article>
-        <article class="compCard glow tilt-card reveal"><div class="compTop"><div class="compIcon">🎥</div><div><h3>Créa & storytelling</h3><p class="compSub">Photo, vidéo iPhone, direction artistique.</p></div></div><ul class="compList"><li><span class="compTag">Reels · TikTok · Stories</span></li><li><span class="compTag">Direction artistique</span></li><li><span class="compTag">Posts 10K+ likes</span></li></ul></article>
-        <article class="compCard glow tilt-card reveal delay-1"><div class="compTop"><div class="compIcon">🤝</div><div><h3>Influence marketing</h3><p class="compSub">Du sourcing au reporting, avec méthode.</p></div></div><ul class="compList"><li><span class="compTag">Scoring 0–5</span></li><li><span class="compTag">Pipeline & suivi livrables</span></li><li><span class="compTag">Briefs & relances</span></li></ul></article>
-        <article class="compCard glow tilt-card reveal delay-2"><div class="compTop"><div class="compIcon">📌</div><div><h3>Ads & Pinterest</h3><p class="compSub">Paid & organique, pilotage ROAS.</p></div></div><ul class="compList"><li><span class="compTag">Pinterest Paid — bon ROAS</span></li><li><span class="compTag">2,3M+ vues organique/mois</span></li><li><span class="compTag">Trafic → site web</span></li></ul></article>
+    </div>
+    <div class="glass col reveal d2">
+      <h3>Mon approche</h3>
+      <div class="steps">
+        <div class="step"><div class="sn">01</div><div><div class="st">Objectif clair</div><div class="sx">Vente / trafic / notoriété + cible + offre.</div></div></div>
+        <div class="step"><div class="sn">02</div><div><div class="st">Structure & tests</div><div class="sx">Angles créa, audiences, placements, budget.</div></div></div>
+        <div class="step"><div class="sn">03</div><div><div class="st">Lecture & décision</div><div class="sx">Couper / scaler / itérer — toujours next step.</div></div></div>
       </div>
-      <div class="callout reveal delay-3"><div><h3>Un profil orienté résultats</h3><p>Chaque compétence est liée à un projet concret — stratégie, exécution, livrables réels.</p></div><button class="btn magnetic" data-tab="projects">Voir les projets</button></div>
-    </section>
+      <div class="crow" style="margin-top:16px;justify-content:flex-start">
+        <button class="btn-o" data-tab="projects">Projets</button>
+        <button class="btn" data-tab="contact">Contact</button>
+      </div>
+    </div>
+  </div>
+  <div class="feat-grid" style="margin-top:16px">
+    <div class="fc glass reveal"><div class="fic">📌</div><h3>Pinterest Paid</h3><p>Campagnes payantes Pinterest — rendements au-dessus des benchmarks secteur.</p><ul class="flist"><li>Ciblage intérêts & mots-clés</li><li>Créatifs optimisés</li><li>Redirection & conversion</li></ul></div>
+    <div class="fc glass reveal d1"><div class="fic">📈</div><h3>Pinterest Organique</h3><p>+2,3M vues/mois sur produits ciblés — croissance sans budget pub.</p><ul class="flist"><li>Stratégie de contenu</li><li>SEO pins & boards</li><li>Trafic qualifié → boutique</li></ul></div>
+    <div class="fc glass reveal d2"><div class="fic">📋</div><h3>Reporting & décisions</h3><p>Les données ne servent à rien sans lecture — je transforme en actions concrètes.</p><ul class="flist"><li>Dashboard simplifié</li><li>Insights actionnables</li><li>Next step systématique</li></ul></div>
+  </div>
+</section>
 
-    <!-- ==================== INFLUENCE ==================== -->
-    <section class="panel" id="influence" data-panel="influence">
-      <div class="panelHead"><div><h2 class="reveal">Influence</h2><p class="reveal delay-1">Process complet : profils → sélection → deal → envois → livrables → reporting.</p></div></div>
-      <div class="influWrap reveal delay-1">
-        <h3 class="subTitle">Influenceurs & activations</h3>
-        <p class="subText">Campagnes gérées pour DivinByDivin — sourcing, brief, envoi, UGC.</p>
-        <div class="influGrid" role="list">
-          <figure class="influCard glow" role="listitem"><img src="/images/influence/influ1.jpg" alt="Malik Benthalla — Blue OG Knit" loading="lazy" /><figcaption class="influCap"><span class="influName">Malik Benthalla</span><span class="influTag">Blue OG Knit</span></figcaption></figure>
-          <figure class="influCard glow" role="listitem"><img src="/images/influence/influ2.jpg" alt="MC Solaar — Ice Fluff Knit" loading="lazy" /><figcaption class="influCap"><span class="influName">MC Solaar</span><span class="influTag">Ice Fluff Knit</span></figcaption></figure>
-          <figure class="influCard glow" role="listitem"><img src="/images/influence/influ3.jpg" alt="Ben PLG — Ice Fluff Knit" loading="lazy" /><figcaption class="influCap"><span class="influName">Ben PLG</span><span class="influTag">Ice Fluff Knit</span></figcaption></figure>
-          <figure class="influCard glow" role="listitem"><img src="/images/influence/influ4.jpg" alt="Ahmed Sylla — Quartz Fluff Knit" loading="lazy" /><figcaption class="influCap"><span class="influName">Ahmed Sylla</span><span class="influTag">Quartz Fluff Knit</span></figcaption></figure>
-          <figure class="influCard glow" role="listitem"><img src="/images/influence/influ5.jpg" alt="Redouane Bougheraba — Kodiak Fluff Knit" loading="lazy" /><figcaption class="influCap"><span class="influName">Redouane Bougheraba</span><span class="influTag">Kodiak Fluff Knit</span></figcaption></figure>
-          <figure class="influCard glow" role="listitem"><img src="/images/influence/influ6.jpg" alt="Gotaga — Kodiak Fluff Knit" loading="lazy" /><figcaption class="influCap"><span class="influName">Gotaga</span><span class="influTag">Kodiak Fluff Knit</span></figcaption></figure>
-        </div>
+<!-- ========== CREA ========== -->
+<section class="panel" id="crea" data-panel="crea">
+  <div class="ph"><h2 class="reveal">Créa</h2><p class="reveal d1">Photo & vidéo iPhone — contenu qui performe pour DivinByDivin & DavrilSupply.</p></div>
+  <h3 class="subh reveal">Exemples de posts</h3>
+  <p class="subp reveal d1">Direction créative complète — réflexion sur le lieu, la lumière et le placement des vêtements.</p>
+  <div class="post-grid">
+    <div class="pc glass reveal">
+      <div class="piw">
+        <img src="/images/posts/vertebra-jogger.jpg" alt="DivinByDivin — Vertebra Jogger" loading="lazy"/>
+        <div class="pov"><span class="badge">@divinbydivin</span></div>
       </div>
-      <div class="processWrap reveal delay-2">
-        <h3 class="subTitle">Process complet</h3>
-        <p class="subText">Méthode claire, suivie, répétable — orientée résultats et assets réutilisables.</p>
-        <div class="processBar glow" role="list" id="processBar">
-          <div class="pStep" role="listitem"><div class="pIcon">🔎</div><div class="pText"><div class="pTitle">Profils</div><div class="pDesc">Niche, style, pays, fit</div></div></div>
-          <div class="pArrow">→</div>
-          <div class="pStep" role="listitem"><div class="pIcon">✅</div><div class="pText"><div class="pTitle">Sélection</div><div class="pDesc">Scoring 0–5 + shortlist</div></div></div>
-          <div class="pArrow">→</div>
-          <div class="pStep" role="listitem"><div class="pIcon">🤝</div><div class="pText"><div class="pTitle">Deal</div><div class="pDesc">Brief, CTA, deadlines</div></div></div>
-          <div class="pArrow">→</div>
-          <div class="pStep" role="listitem"><div class="pIcon">📦</div><div class="pText"><div class="pTitle">Envois</div><div class="pDesc">Tracking, réception</div></div></div>
-          <div class="pArrow">→</div>
-          <div class="pStep" role="listitem"><div class="pIcon">🎥</div><div class="pText"><div class="pTitle">Livrables</div><div class="pDesc">UGC, stories, posts</div></div></div>
-          <div class="pArrow">→</div>
-          <div class="pStep" role="listitem"><div class="pIcon">📊</div><div class="pText"><div class="pTitle">Reporting</div><div class="pDesc">Résultats + next steps</div></div></div>
-        </div>
-      </div>
-      <div class="twoCols">
-        <div class="col glow reveal delay-1"><h3>Pipeline opérationnel</h3><div class="steps"><div class="step"><div class="stepNum">01</div><div class="stepBody"><div class="stepTitle">Sourcing & shortlist</div><div class="stepText">Recherche par niche, style, pays, fit produit.</div></div></div><div class="step"><div class="stepNum">02</div><div class="stepBody"><div class="stepTitle">Scoring (0–5)</div><div class="stepText">Alignement marque + audience + perf + contenu.</div></div></div><div class="step"><div class="stepNum">03</div><div class="stepBody"><div class="stepTitle">Outreach & suivi</div><div class="stepText">Relances, conditions, brief, deadlines.</div></div></div><div class="step"><div class="stepNum">04</div><div class="stepBody"><div class="stepTitle">Expédition & livrables</div><div class="stepText">Tracking, UGC, repost, conformité brief.</div></div></div></div></div>
-        <div class="col glow reveal delay-2"><h3>Ce que tu reçois</h3><div class="deliverGrid"><div class="deliver"><div class="deliverTop"><span class="badge">Template</span><span class="badge ghost">Ops</span></div><div class="deliverTitle">Tracker campagne</div><p>Statuts, dates, produits, KPIs.</p></div><div class="deliver"><div class="deliverTop"><span class="badge">Brief</span><span class="badge ghost">Créa</span></div><div class="deliverTitle">Brief créateur</div><p>Hook, guidelines, CTA.</p></div><div class="deliver"><div class="deliverTop"><span class="badge">UGC</span><span class="badge ghost">Assets</span></div><div class="deliverTitle">Contenus réutilisables</div><p>Ads, stories, PDP, repost.</p></div><div class="deliver"><div class="deliverTop"><span class="badge">Report</span><span class="badge ghost">KPI</span></div><div class="deliverTitle">Reporting final</div><p>Résultats + next steps.</p></div></div><div class="subCtaRow"><button class="btn magnetic" data-tab="contact">Me contacter</button><button class="btn ghost magnetic" data-tab="projects">Exemples</button></div></div>
-      </div>
-    </section>
-
-    <!-- ==================== E-COMMERCE ==================== -->
-    <section class="panel" id="ecommerce" data-panel="ecommerce">
-      <div class="panelHead"><div><h2 class="reveal">E-commerce</h2><p class="reveal delay-1">Achat-revente Vinted, sourcing mondial, stock local & automatisation IA.</p></div></div>
-      <div class="ecoStatsRow reveal delay-1">
-        <div class="ecoStat glow tilt-card"><div class="ecoStatVal count-up" data-target="350" data-prefix="+" data-suffix="K€">+350K€</div><div class="ecoStatLabel">CA généré</div></div>
-        <div class="ecoStat glow tilt-card"><div class="ecoStatVal count-up" data-target="5" data-suffix="+">5+</div><div class="ecoStatLabel">Pays fournisseurs</div></div>
-        <div class="ecoStat glow tilt-card"><div class="ecoStatVal">Local</div><div class="ecoStatLabel">Stock dédié</div></div>
-        <div class="ecoStat glow tilt-card"><div class="ecoStatVal">IA</div><div class="ecoStatLabel">SAV automatisé</div></div>
-      </div>
-      <div class="twoCols" style="margin-top:16px">
-        <div class="col glow reveal delay-1"><h3>Ce que je gère</h3><div class="steps"><div class="step"><div class="stepNum">01</div><div class="stepBody"><div class="stepTitle">Sourcing international</div><div class="stepText">Fournisseurs au Royaume-Uni, Philippines, Chine, Japon, France — contact direct et rencontres physiques.</div></div></div><div class="step"><div class="stepNum">02</div><div class="stepBody"><div class="stepTitle">Analyse du marché</div><div class="stepText">Identification des tendances, produits à fort potentiel, pricing compétitif et veille concurrentielle.</div></div></div><div class="step"><div class="stepNum">03</div><div class="stepBody"><div class="stepTitle">Gestion du stock</div><div class="stepText">Local dédié, organisation des entrées/sorties, suivi des niveaux de stock et rotation des articles.</div></div></div><div class="step"><div class="stepNum">04</div><div class="stepBody"><div class="stepTitle">Commandes & SAV automatisé</div><div class="stepText">Gestion des commandes et réponses clients — automatisation IA des messages récurrents.</div></div></div></div></div>
-        <div class="col glow reveal delay-2"><h3>Résultats & opérations</h3><div class="deliverGrid"><div class="deliver"><div class="deliverTop"><span class="badge">+350K€</span></div><div class="deliverTitle">Chiffre d'affaires</div><p>CA total généré via Vinted.</p></div><div class="deliver"><div class="deliverTop"><span class="badge">IA</span><span class="badge ghost">Auto</span></div><div class="deliverTitle">SAV automatisé</div><p>Réponses IA aux messages récurrents.</p></div><div class="deliver"><div class="deliverTop"><span class="badge">Sourcing</span></div><div class="deliverTitle">Réseau fournisseurs</div><p>UK · Philippines · Chine · Japon · France</p></div><div class="deliver"><div class="deliverTop"><span class="badge">Stock</span><span class="badge ghost">Local</span></div><div class="deliverTitle">Local dédié</div><p>Gestion stock & expéditions.</p></div></div><div class="subCtaRow"><button class="btn magnetic" data-tab="contact">Me contacter</button><button class="btn ghost magnetic" data-tab="projects">Voir projets</button></div></div>
-      </div>
-      <div class="featureGrid" style="margin-top:16px">
-        <article class="featureCard glow tilt-card reveal"><div class="featureIcon">🌍</div><h3>Sourcing mondial</h3><p>Contact direct avec des fournisseurs sur plusieurs continents — rencontres physiques et négociation.</p><ul class="miniList"><li>UK · Philippines · Chine · Japon</li><li>Relations fournisseurs long terme</li><li>Négociation & conditions</li></ul></article>
-        <article class="featureCard glow tilt-card reveal delay-1"><div class="featureIcon">🤖</div><h3>Automatisation IA</h3><p>Réponses clients automatisées par IA pour les questions récurrentes — gain de temps massif.</p><ul class="miniList"><li>SAV automatisé</li><li>Réponses personnalisées</li><li>Gestion des litiges</li></ul></article>
-        <article class="featureCard glow tilt-card reveal delay-2"><div class="featureIcon">📦</div><h3>Stock & logistique</h3><p>Local dédié, organisation rigoureuse des entrées/sorties, suivi et rotation des articles.</p><ul class="miniList"><li>Local de stockage</li><li>Inventaire & tracking</li><li>Expédition & suivi commandes</li></ul></article>
-      </div>
-    </section>
-
-    <!-- ==================== ADS & KPI ==================== -->
-    <section class="panel" id="ads" data-panel="ads">
-      <div class="panelHead"><div><h2 class="reveal">Ads & KPI</h2><p class="reveal delay-1">Pinterest paid & organique — pilotage data, décisions actionnables.</p></div></div>
-      <div class="pinterestBanner glow reveal delay-1">
-        <div class="pinterestLeft">
-          <span class="badge" style="background:rgba(230,0,35,.15);border-color:rgba(230,0,35,.30);color:#ff7070">Pinterest</span>
-          <h3>Compte organique Pinterest</h3>
-          <p>Croissance d'un compte organique sur des produits ciblés, avec redirection directe vers site web — sans budget publicitaire.</p>
-        </div>
-        <div class="pinterestStats">
-          <div class="pStat"><div class="pStatVal count-up" data-target="2.3" data-suffix="M+" data-decimal="true">2,3M+</div><div class="pStatLabel">vues / mois</div></div>
-          <div class="pStat"><div class="pStatVal">Paid</div><div class="pStatLabel">bon ROAS</div></div>
-          <div class="pStat"><div class="pStatVal">↗</div><div class="pStatLabel">trafic site</div></div>
-        </div>
-      </div>
-      <div class="twoCols" style="margin-top:16px">
-        <div class="col glow reveal delay-1"><h3>Indicateurs que je suis</h3><div class="kpiGrid"><div class="kpiCard"><div class="kpiName">ROAS</div><div class="kpiDesc">Rentabilité campagne</div><div class="kpiFormula">CA ÷ Dépenses</div></div><div class="kpiCard"><div class="kpiName">CPA</div><div class="kpiDesc">Coût par conversion</div><div class="kpiFormula">Dépenses ÷ Conv.</div></div><div class="kpiCard"><div class="kpiName">CTR</div><div class="kpiDesc">Qualité créatif</div><div class="kpiFormula">Clics ÷ Impressions</div></div><div class="kpiCard"><div class="kpiName">CVR</div><div class="kpiDesc">Conversion site</div><div class="kpiFormula">Achats ÷ Sessions</div></div></div></div>
-        <div class="col glow reveal delay-2"><h3>Mon approche</h3><div class="steps"><div class="step"><div class="stepNum">01</div><div class="stepBody"><div class="stepTitle">Objectif clair</div><div class="stepText">Vente / trafic / notoriété + cible + offre définie.</div></div></div><div class="step"><div class="stepNum">02</div><div class="stepBody"><div class="stepTitle">Structure & tests</div><div class="stepText">Angles créa, audiences, placements, budget — tout est testé.</div></div></div><div class="step"><div class="stepNum">03</div><div class="stepBody"><div class="stepTitle">Lecture & décision</div><div class="stepText">Couper / scaler / itérer — toujours avec un next step documenté.</div></div></div></div><div class="subCtaRow"><button class="btn ghost magnetic" data-tab="projects">Voir projets</button><button class="btn magnetic" data-tab="contact">Contact</button></div></div>
-      </div>
-      <div class="featureGrid" style="margin-top:16px">
-        <article class="featureCard glow tilt-card reveal"><div class="featureIcon">📌</div><h3>Pinterest Paid</h3><p>Campagnes payantes Pinterest avec des rendements au-dessus des benchmarks du secteur.</p><ul class="miniList"><li>Ciblage intérêts & mots-clés</li><li>Créatifs optimisés</li><li>Redirection & conversion</li></ul></article>
-        <article class="featureCard glow tilt-card reveal delay-1"><div class="featureIcon">📈</div><h3>Pinterest Organique</h3><p>+2,3M vues/mois sur des produits ciblés — croissance organique avec redirection vers site.</p><ul class="miniList"><li>Stratégie de contenu</li><li>SEO pins & boards</li><li>Trafic qualifié → boutique</li></ul></article>
-        <article class="featureCard glow tilt-card reveal delay-2"><div class="featureIcon">📋</div><h3>Reporting & décisions</h3><p>Les chiffres ne servent à rien sans la bonne lecture — je transforme les données en actions.</p><ul class="miniList"><li>Dashboard simplifié</li><li>Insights actionnables</li><li>Next step systématique</li></ul></article>
-      </div>
-    </section>
-
-    <!-- ==================== CREA ==================== -->
-    <section class="panel" id="contenu" data-panel="contenu">
-      <div class="panelHead"><div><h2 class="reveal">Créa</h2><p class="reveal delay-1">Photo & vidéo iPhone — du contenu qui performe pour DivinByDivin & DavrilSupply.</p></div></div>
-      <div class="postsSection reveal delay-1">
-        <h3 class="subTitle">Exemples de posts</h3>
-        <p class="subText">Direction créative complète — réflexion sur le lieu, la lumière et le placement des vêtements pour un résultat premium à l'iPhone.</p>
-        <div class="postGrid">
-          <div class="postCard glow">
-            <div class="postImgWrap"><img src="/images/posts/vertebra-jogger.jpg" alt="DivinByDivin — Vertebra Jogger Winter Drop" loading="lazy" /><div class="postImgOverlay"><span class="badge">@divinbydivin</span></div></div>
-            <div class="postBody">
-              <div class="postCaption">🪡 WINTER DROP — VERTEBRA JOGGER</div>
-              <p class="postNote">Sol béton, lumière naturelle diffuse, placement architectural flat-lay — créer de la tension visuelle sans mannequin pour mettre en valeur les broderies.</p>
-              <div class="postStats"><div class="postStat"><strong class="count-up" data-target="10700" data-suffix="">10 700</strong><span>J'aime</span></div><div class="postStat"><strong>sidodavril</strong><span>& 10.7k autres</span></div></div>
-            </div>
-          </div>
-          <div class="postCard glow">
-            <div class="postImgWrap"><img src="/images/posts/empire-zip.jpg" alt="DavrilSupply — Empire Zip by Davril" loading="lazy" /><div class="postImgOverlay"><span class="badge">@davrilsupply</span></div></div>
-            <div class="postBody">
-              <div class="postCaption">🧵 EMPIRE ZIP BY DAVRIL — NEXT WEEK</div>
-              <p class="postNote">Mur blanc, lumière neutre, focus sur le détail broderie et le zip — mise en valeur du produit par contraste et texture, sans accessoire superflu.</p>
-              <div class="postStats"><div class="postStat"><strong class="count-up" data-target="8354" data-suffix="">8 354</strong><span>J'aime</span></div><div class="postStat"><strong>caz.ou</strong><span>& 8354 autres</span></div></div>
-            </div>
-          </div>
+      <div class="pbody">
+        <div class="pcap">🪡 WINTER DROP — VERTEBRA JOGGER</div>
+        <p class="pnote">Sol béton, lumière naturelle diffuse, placement architectural flat-lay — tension visuelle sans mannequin pour mettre en valeur les broderies.</p>
+        <div class="pstats">
+          <div class="pst"><strong class="gtext">10,7K</strong><span>J'aime</span></div>
+          <div class="pst"><strong>sidodavril</strong><span>& 10.7k autres</span></div>
         </div>
       </div>
-      <div class="featureGrid" style="margin-top:20px">
-        <article class="featureCard glow tilt-card reveal"><div class="featureIcon">📸</div><h3>Photo & vidéo iPhone</h3><p>Production contenu premium à l'iPhone — réflexion sur le lieu, la lumière et le placement pour un résultat pro.</p><ul class="miniList"><li>Direction artistique</li><li>Flat-lay & portrait</li><li>Cohérence visuelle de marque</li></ul></article>
-        <article class="featureCard glow tilt-card reveal delay-1"><div class="featureIcon">🎬</div><h3>Hooks & formats courts</h3><p>Capturer l'attention en 1–2 secondes — Reels, TikTok, stories interactives et CTA naturel.</p><ul class="miniList"><li>Reels · TikTok · Stories</li><li>Scripts & montage</li><li>Tests d'angles</li></ul></article>
-        <article class="featureCard glow tilt-card reveal delay-2"><div class="featureIcon">♻️</div><h3>Recyclage contenu</h3><p>1 tournage = 10 assets — formats adaptés à chaque canal : Instagram, TikTok, Pinterest.</p><ul class="miniList"><li>Multi-formats</li><li>Planning éditorial</li><li>Cohérence cross-canal</li></ul></article>
+    </div>
+    <div class="pc glass reveal d1">
+      <div class="piw">
+        <img src="/images/posts/empire-zip.jpg" alt="DavrilSupply — Empire Zip" loading="lazy"/>
+        <div class="pov"><span class="badge">@davrilsupply</span></div>
       </div>
-      <div class="callout reveal delay-3"><div><h3>Tu veux un content system clé en main ?</h3><p>Planning + templates + direction créa + structure pour publier régulièrement sur tous tes canaux.</p></div><button class="btn ghost magnetic" data-tab="contact">Let's go</button></div>
-    </section>
-
-    <!-- ==================== PROJECTS ==================== -->
-    <section class="panel" id="projects" data-panel="projects">
-      <div class="panelHead"><div><h2 class="reveal">Projets</h2><p class="reveal delay-1">Stratégie + exécution + livrables réels.</p></div></div>
-      <div class="projectsGrid">
-        <article class="projectCard glow tilt-card reveal"><div class="projTop"><span class="pill mini">Agency</span><span class="pill mini ghost">Meta Ads</span></div><h3>Prime Circle</h3><p>Agence d'infrastructure publicitaire Meta avec certification Platinum HIVA. Gestion des relations clients, business development, data et opérations internes.</p><ul class="projList"><li>Relations clients & business dev</li><li>Analyse de données & reporting</li><li>Opérations & audit interne</li></ul><div class="projFooter"><span class="badge">Meta</span><span class="badge ghost">Platinum HIVA</span></div></article>
-        <article class="projectCard glow tilt-card reveal delay-1"><div class="projTop"><span class="pill mini">Streetwear</span><span class="pill mini ghost">Influence</span></div><h3>DivinByDivin — Influence & créa</h3><p>Process influence complet + production contenu photo/vidéo pour une marque streetwear Lille.</p><ul class="projList"><li>Tracker + suivi livrables</li><li>Briefs créateurs & relances</li><li>Posts organiques 10K+ likes</li></ul><div class="projFooter"><span class="badge">En cours</span></div></article>
-        <article class="projectCard glow tilt-card reveal delay-2"><div class="projTop"><span class="pill mini">E-commerce</span><span class="pill mini ghost">Vinted</span></div><h3>Achat-revente Vinted</h3><p>Activité e-commerce avec gestion de stock local, sourcing international et automatisation IA du SAV.</p><ul class="projList"><li>+350K€ de CA généré</li><li>Fournisseurs UK · Chine · Japon · Philippines</li><li>Automatisation IA réponses messages</li></ul><div class="projFooter"><span class="badge">+350K€ CA</span><span class="badge ghost">IA</span></div></article>
-        <article class="projectCard glow tilt-card reveal"><div class="projTop"><span class="pill mini">E-commerce</span><span class="pill mini ghost">Shopify</span></div><h3>DavrilSupply — Boutique</h3><p>Optimisation pages produit, direction créative contenu photo/vidéo et gestion de la boutique Shopify.</p><ul class="projList"><li>Copywriting & UX pages produit</li><li>Production contenu iPhone</li><li>Gestion boutique Shopify</li></ul><div class="projFooter"><span class="badge">Shopify</span></div></article>
-        <article class="projectCard glow tilt-card reveal delay-1"><div class="projTop"><span class="pill mini">Ads</span><span class="pill mini ghost">Pinterest</span></div><h3>Pinterest — 2,3M vues/mois</h3><p>Croissance d'un compte organique à +2,3M vues/mois + campagnes paid avec bons rendements.</p><ul class="projList"><li>+2 300 000 vues mensuelles organiques</li><li>Redirection trafic qualifié vers site</li><li>Campagnes paid — bon ROAS</li></ul><div class="projFooter"><span class="badge">2,3M vues/mois</span></div></article>
-        <article class="projectCard glow tilt-card reveal delay-2"><div class="projTop"><span class="pill mini">Systèmes</span><span class="pill mini ghost">Data</span></div><h3>Scoring influence — Méthode 0–5</h3><p>Système de scoring pour prioriser les profils influenceurs et sécuriser le fit marque/audience.</p><ul class="projList"><li>Critères pondérés & notation</li><li>Pipeline de suivi complet</li><li>Décisions documentées</li></ul><div class="projFooter"><span class="badge">Template</span></div></article>
+      <div class="pbody">
+        <div class="pcap">🧵 EMPIRE ZIP BY DAVRIL — NEXT WEEK</div>
+        <p class="pnote">Mur blanc, lumière neutre, focus sur le détail broderie et le zip — mise en valeur par le contraste et la texture.</p>
+        <div class="pstats">
+          <div class="pst"><strong class="gtext">8 354</strong><span>J'aime</span></div>
+          <div class="pst"><strong>caz.ou</strong><span>& 8354 autres</span></div>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+  <div class="feat-grid" style="margin-top:16px">
+    <div class="fc glass reveal"><div class="fic">📸</div><h3>Photo & vidéo iPhone</h3><p>Production contenu premium — réflexion sur lieu, lumière, placement pour un résultat pro.</p><ul class="flist"><li>Direction artistique</li><li>Flat-lay & portrait</li><li>Cohérence visuelle marque</li></ul></div>
+    <div class="fc glass reveal d1"><div class="fic">🎬</div><h3>Hooks & formats courts</h3><p>Capturer l'attention en 1–2 secondes — Reels, TikTok, stories, CTA naturel.</p><ul class="flist"><li>Reels · TikTok · Stories</li><li>Scripts & montage</li><li>Tests d'angles</li></ul></div>
+    <div class="fc glass reveal d2"><div class="fic">♻️</div><h3>Recyclage contenu</h3><p>1 tournage = 10 assets — formats adaptés à chaque canal sans re-tourner.</p><ul class="flist"><li>Multi-formats</li><li>Planning éditorial</li><li>Cohérence cross-canal</li></ul></div>
+  </div>
+  <div class="callout glass reveal d3"><div><h3>Tu veux un content system clé en main ?</h3><p>Planning + templates + direction créa pour publier régulièrement sur tous tes canaux.</p></div><button class="btn-o" data-tab="contact">Let's go</button></div>
+</section>
 
-    <!-- ==================== CONTACT ==================== -->
-    <section class="panel" id="contact" data-panel="contact">
-      <div class="panelHead"><div><h2 class="reveal">Contact</h2><p class="reveal delay-1">Un projet, une question, une opportunité — je réponds vite.</p></div></div>
-      <div class="contactBox glow reveal delay-2">
-        <div class="contactRow"><div><div class="label">Email</div><a class="link" href="mailto:luludavril12@gmail.com">luludavril12@gmail.com</a></div><button class="btn small magnetic" id="copyEmail" type="button"><span id="copyLabel">Copier</span></button></div>
-        <div class="contactRow"><div><div class="label">Instagram</div><a class="link" href="https://www.instagram.com/lu__dav/?hl=fr" target="_blank" rel="noopener noreferrer">@lu__dav</a></div><a class="btn small ghost magnetic" href="https://www.instagram.com/lu__dav/?hl=fr" target="_blank" rel="noopener noreferrer">Voir</a></div>
-        <div class="contactRow"><div><div class="label">LinkedIn</div><a class="link" href="https://www.linkedin.com/in/lucas-davril-91b023295/" target="_blank" rel="noopener noreferrer">Lucas Davril</a></div><a class="btn small ghost magnetic" href="https://www.linkedin.com/in/lucas-davril-91b023295/" target="_blank" rel="noopener noreferrer">Voir</a></div>
-        <div class="toast" id="toast" role="status" aria-live="polite">Email copié ✅</div>
-      </div>
-      <div class="contactMeta reveal delay-3"><p>Basé à <strong>Lille</strong> · Disponible pour missions, stages & collaborations · Répond en général sous 24h.</p></div>
-    </section>
+<!-- ========== PROJECTS ========== -->
+<section class="panel" id="projects" data-panel="projects">
+  <div class="ph"><h2 class="reveal">Projets</h2><p class="reveal d1">Stratégie + exécution + livrables réels.</p></div>
+  <div class="proj-grid">
+    <div class="pj glass reveal"><div class="ptags"><span class="ptag hl">Agency</span><span class="ptag">Meta Ads</span></div><h3>Prime Circle</h3><p>Agence d'infrastructure publicitaire Meta, certification Platinum HIVA. Relations clients, business dev, data & ops internes.</p><ul class="plist"><li>Relations clients & business dev</li><li>Analyse de données & reporting</li><li>Opérations & audit interne</li></ul><div class="pfoot"><span class="badge hl">Meta</span><span class="badge teal">Platinum HIVA</span></div></div>
+    <div class="pj glass reveal d1"><div class="ptags"><span class="ptag hl">Streetwear</span><span class="ptag">Influence</span></div><h3>DivinByDivin — Influence & créa</h3><p>Process influence complet + production contenu photo/vidéo pour une marque streetwear Lille.</p><ul class="plist"><li>Tracker + suivi livrables</li><li>Briefs créateurs & relances</li><li>Posts 10K+ likes</li></ul><div class="pfoot"><span class="badge hl">En cours</span></div></div>
+    <div class="pj glass reveal d2"><div class="ptags"><span class="ptag hl">E-commerce</span><span class="ptag">Vinted</span></div><h3>Achat-revente Vinted</h3><p>Activité e-commerce avec stock local, sourcing international et automatisation IA du SAV.</p><ul class="plist"><li>+350K€ de CA généré</li><li>UK · Chine · Japon · Philippines</li><li>Automatisation IA réponses</li></ul><div class="pfoot"><span class="badge">+350K€</span><span class="badge teal">IA</span></div></div>
+    <div class="pj glass reveal"><div class="ptags"><span class="ptag">E-commerce</span><span class="ptag">Shopify</span></div><h3>DavrilSupply — Boutique</h3><p>Optimisation pages produit, direction créative contenu iPhone et gestion boutique Shopify.</p><ul class="plist"><li>Copywriting & UX pages produit</li><li>Production contenu iPhone</li><li>Gestion boutique Shopify</li></ul><div class="pfoot"><span class="badge">Shopify</span></div></div>
+    <div class="pj glass reveal d1"><div class="ptags"><span class="ptag hl">Ads</span><span class="ptag">Pinterest</span></div><h3>Pinterest — 2,3M vues/mois</h3><p>Compte organique +2,3M vues/mois + campagnes paid à bons rendements.</p><ul class="plist"><li>+2 300 000 vues mensuelles</li><li>Redirection trafic vers site</li><li>Campagnes paid — bon ROAS</li></ul><div class="pfoot"><span class="badge hl">2,3M vues/mois</span></div></div>
+    <div class="pj glass reveal d2"><div class="ptags"><span class="ptag">Systèmes</span><span class="ptag">Data</span></div><h3>Scoring influence — Méthode 0–5</h3><p>Système de scoring pour prioriser les profils influenceurs et sécuriser le fit marque/audience.</p><ul class="plist"><li>Critères pondérés & notation</li><li>Pipeline de suivi complet</li><li>Décisions documentées</li></ul><div class="pfoot"><span class="badge">Template</span></div></div>
+  </div>
+</section>
 
-  </main>
+<!-- ========== CONTACT ========== -->
+<section class="panel" id="contact" data-panel="contact">
+  <div class="ph"><h2 class="reveal">Contact</h2><p class="reveal d1">Un projet, une question, une opportunité — je réponds vite.</p></div>
+  <div class="cbox glass reveal d2">
+    <div class="cr"><div><div class="clb">Email</div><a class="clink" href="mailto:luludavril12@gmail.com">luludavril12@gmail.com</a></div><button class="btn" id="copyEmail"><span id="cpLbl">Copier</span></button></div>
+    <div class="cr"><div><div class="clb">Instagram</div><a class="clink" href="https://www.instagram.com/lu__dav/?hl=fr" target="_blank" rel="noopener">@lu__dav</a></div><a class="btn-o" href="https://www.instagram.com/lu__dav/?hl=fr" target="_blank" rel="noopener">Voir</a></div>
+    <div class="cr"><div><div class="clb">LinkedIn</div><a class="clink" href="https://www.linkedin.com/in/lucas-davril-91b023295/" target="_blank" rel="noopener">Lucas Davril</a></div><a class="btn-o" href="https://www.linkedin.com/in/lucas-davril-91b023295/" target="_blank" rel="noopener">Voir</a></div>
+    <div class="toast" id="toast">Email copié ✅</div>
+  </div>
+  <p class="cmeta reveal d3">Basé à <strong>Lille</strong> · Disponible pour missions, stages & collaborations · Répond sous 24h.</p>
+</section>
 
-  <footer class="footer" role="contentinfo">
-    <span>© <span id="year"></span> Lucas Davril</span>
-    <span class="sep">·</span>
-    <span>Lille, France</span>
-    <span class="sep">·</span>
-    <span class="muted">Hosted on Vercel</span>
-  </footer>
+</main>
 
-  <script src="script.js"></script>
+<footer class="foot">
+  <span>© <span id="yr"></span> Lucas Davril</span>
+  <span class="dot-sep">·</span>
+  <span>Lille, France</span>
+  <span class="dot-sep">·</span>
+  <span>Hosted on Vercel</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
