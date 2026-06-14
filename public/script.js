@@ -300,3 +300,11 @@ document.querySelectorAll('.ic img, .piw img').forEach(img => {
   /* ---- start ---- */
   start();
 })();
+
+/* ===== PROFILE PHOTO FALLBACK ===== */
+const profileImg = document.getElementById('profileImg');
+const photoPlaceholder = document.getElementById('photoPlaceholder');
+if (profileImg && photoPlaceholder) {
+  profileImg.addEventListener('load', () => { photoPlaceholder.classList.add('hidden'); });
+  profileImg.addEventListener('error', () => { profileImg.style.display = 'none'; });
+}
