@@ -220,30 +220,37 @@ document.querySelectorAll('.ic img, .piw img').forEach(img => {
   });
 });
 
-/* ===== INFLUENCE CAROUSEL ===== */
+/* ===== INFLUENCE CAROUSEL — infinite loop ===== */
 (function () {
   const carousel = document.getElementById('influCarousel');
   const btnPrev  = document.getElementById('icPrev');
   const btnNext  = document.getElementById('icNext');
   if (!carousel) return;
 
-  const SPEED       = 0.6;   // px per frame
-  const CARD_STEP   = 248;   // card width + gap
-  const RESUME_DELAY = 5000; // ms before auto-resume
+  const SPEED        = 0.6;   // px per frame
+  const CARD_STEP    = 248;   // card width + gap for arrow scroll
+  const RESUME_DELAY = 5000;  // ms before auto-resume after manual interaction
+
+  /* ---- duplicate cards for seamless infinite loop ---- */
+  const origCards = Array.from(carousel.querySelectorAll('.ic'));
+  origCards.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    carousel.appendChild(clone);
+  });
 
   let animId;
   let running  = false;
   let resumeTm = null;
 
-  /* ---- auto-scroll ---- */
+  /* ---- infinite tick: jump back when halfway ---- */
   function tick() {
-    const max = carousel.scrollWidth - carousel.clientWidth;
-    if (max <= 0) return;
-    if (carousel.scrollLeft >= max) {
-      carousel.scrollLeft = 0;
-    } else {
-      carousel.scrollLeft += SPEED;
+    const half = carousel.scrollWidth / 2;
+    // Seamless loop: when we've scrolled through original set, snap back
+    if (carousel.scrollLeft >= half) {
+      carousel.scrollLeft -= half;
     }
+    carousel.scrollLeft += SPEED;
     if (running) animId = requestAnimationFrame(tick);
   }
 
@@ -270,18 +277,21 @@ document.querySelectorAll('.ic img, .piw img').forEach(img => {
 
   /* ---- arrows ---- */
   btnPrev && btnPrev.addEventListener('click', () => {
-    carousel.scrollBy({ left: -CARD_STEP, behavior: 'smooth' });
+    carousel.scrollLeft -= CARD_STEP;
     scheduleResume();
   });
   btnNext && btnNext.addEventListener('click', () => {
-    carousel.scrollBy({ left: CARD_STEP, behavior: 'smooth' });
+    carousel.scrollLeft += CARD_STEP;
     scheduleResume();
   });
 
-  /* ---- touch / drag on mobile ---- */
+  /* ---- touch on mobile ---- */
   let touchX = 0;
-  carousel.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; stop(); clearTimeout(resumeTm); }, { passive: true });
-  carousel.addEventListener('touchend',   e => {
+  carousel.addEventListener('touchstart', e => {
+    touchX = e.touches[0].clientX;
+    stop(); clearTimeout(resumeTm);
+  }, { passive: true });
+  carousel.addEventListener('touchend', e => {
     const dx = touchX - e.changedTouches[0].clientX;
     carousel.scrollLeft += dx;
     scheduleResume();
