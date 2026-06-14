@@ -744,16 +744,17 @@ figcaption {
 /* Proof strip */
 .proof-strip {
   display: flex; align-items: center; gap: 0;
-  padding: 28px 32px; border-radius: 20px; margin-bottom: 36px;
+  padding: 20px 24px; border-radius: 20px; margin-bottom: 36px;
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.08);
   backdrop-filter: blur(20px);
   flex-wrap: wrap;
 }
-.proof-item { flex: 1; min-width: 120px; text-align: center; padding: 8px 16px; }
+.proof-item { flex: 1; min-width: 80px; max-width: 25%; text-align: center; padding: 8px 10px; overflow: hidden; }
 .proof-val {
-  font-family: var(--fh); font-size: clamp(28px, 3.5vw, 42px);
-  font-weight: 900; letter-spacing: -.05em; margin-bottom: 5px;
+  font-family: var(--fh); font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 900; letter-spacing: -.04em; margin-bottom: 5px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .proof-label { font-size: 12.5px; color: var(--mut); }
 .proof-sep {
@@ -855,8 +856,8 @@ figcaption {
 }
 .pjf-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
 .pjf-metric {
-  font-family: var(--fh); font-size: clamp(32px, 4vw, 52px);
-  font-weight: 900; letter-spacing: -.05em; line-height: 1;
+  font-family: var(--fh); font-size: clamp(24px, 3vw, 40px);
+  font-weight: 900; letter-spacing: -.04em; line-height: 1.05;
   margin-bottom: 14px;
 }
 .pjf-title { font-size: clamp(17px,1.8vw,22px); letter-spacing: -.03em; margin-bottom: 10px; }
@@ -891,8 +892,8 @@ figcaption {
 .pjv2-top { display: flex; flex-direction: column; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.06); }
 .pjv2-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .pjv2-metric {
-  font-family: var(--fh); font-size: clamp(28px, 3vw, 38px);
-  font-weight: 900; letter-spacing: -.05em; line-height: 1.05;
+  font-family: var(--fh); font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 900; letter-spacing: -.04em; line-height: 1.1;
 }
 .pjv2-title { font-size: 15.5px; letter-spacing: -.02em; font-weight: 800; }
 .pjv2-desc  { font-size: 13px; color: var(--mut); line-height: 1.6; flex: 1; }
