@@ -267,6 +267,7 @@ h1,h2,h3,h4 { font-family: var(--fh); }
 
 .fw-v   { font-family: var(--fh); font-size: 34px; font-weight: 900; letter-spacing: -.05em; margin-bottom: 4px; }
 .fw-l   { font-size: 12px; color: rgba(240,243,255,.55); line-height: 1.4; }
+.fw-sub { font-size: 11px; color: rgba(240,243,255,.4); margin-top: 2px; display: block; }
 .fw-ico { font-size: 26px; margin-bottom: 6px; }
 .ftag   { display: inline-flex; margin-top: 10px; padding: 3px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 700; background: rgba(68,105,255,.14); border: 1px solid rgba(68,105,255,.28); color: rgba(240,243,255,.8); }
 .ftag.teal   { background: rgba(0,210,140,.12); border-color: rgba(0,210,140,.26); }
