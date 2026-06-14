@@ -32,6 +32,7 @@ function setTab(id, push = true) {
   setTimeout(() => {
     panel?.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
     triggerProcess(panel);
+    triggerSkillBars(panel);
   }, 60);
 
   closeMobile();
@@ -86,6 +87,16 @@ const revObs = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 
 document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+/* ===== SKILL BARS ANIMATION ===== */
+function triggerSkillBars(root = document) {
+  const fills = Array.from(root?.querySelectorAll('.sb-fill') || []);
+  if (!fills.length) return;
+  fills.forEach(f => { f.style.width = '0%'; });
+  setTimeout(() => {
+    fills.forEach(f => { f.style.width = (f.dataset.level || 0) + '%'; });
+  }, 120);
+}
 
 /* ===== PROCESS BAR ANIMATION ===== */
 function triggerProcess(root = document) {
