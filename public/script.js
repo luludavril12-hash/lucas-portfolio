@@ -219,3 +219,74 @@ document.querySelectorAll('.ic img, .piw img').forEach(img => {
     wrap.appendChild(ph);
   });
 });
+
+/* ===== INFLUENCE CAROUSEL ===== */
+(function () {
+  const carousel = document.getElementById('influCarousel');
+  const btnPrev  = document.getElementById('icPrev');
+  const btnNext  = document.getElementById('icNext');
+  if (!carousel) return;
+
+  const SPEED       = 0.6;   // px per frame
+  const CARD_STEP   = 248;   // card width + gap
+  const RESUME_DELAY = 5000; // ms before auto-resume
+
+  let animId;
+  let running  = false;
+  let resumeTm = null;
+
+  /* ---- auto-scroll ---- */
+  function tick() {
+    const max = carousel.scrollWidth - carousel.clientWidth;
+    if (max <= 0) return;
+    if (carousel.scrollLeft >= max) {
+      carousel.scrollLeft = 0;
+    } else {
+      carousel.scrollLeft += SPEED;
+    }
+    if (running) animId = requestAnimationFrame(tick);
+  }
+
+  function start() {
+    if (running) return;
+    running = true;
+    animId  = requestAnimationFrame(tick);
+  }
+
+  function stop() {
+    running = false;
+    cancelAnimationFrame(animId);
+  }
+
+  function scheduleResume() {
+    clearTimeout(resumeTm);
+    stop();
+    resumeTm = setTimeout(start, RESUME_DELAY);
+  }
+
+  /* ---- hover: pause / resume ---- */
+  carousel.addEventListener('mouseenter', () => { stop(); clearTimeout(resumeTm); });
+  carousel.addEventListener('mouseleave', start);
+
+  /* ---- arrows ---- */
+  btnPrev && btnPrev.addEventListener('click', () => {
+    carousel.scrollBy({ left: -CARD_STEP, behavior: 'smooth' });
+    scheduleResume();
+  });
+  btnNext && btnNext.addEventListener('click', () => {
+    carousel.scrollBy({ left: CARD_STEP, behavior: 'smooth' });
+    scheduleResume();
+  });
+
+  /* ---- touch / drag on mobile ---- */
+  let touchX = 0;
+  carousel.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; stop(); clearTimeout(resumeTm); }, { passive: true });
+  carousel.addEventListener('touchend',   e => {
+    const dx = touchX - e.changedTouches[0].clientX;
+    carousel.scrollLeft += dx;
+    scheduleResume();
+  }, { passive: true });
+
+  /* ---- start ---- */
+  start();
+})();
