@@ -246,7 +246,7 @@ h1,h2,h3,h4 { font-family: var(--fh); }
 .hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
 
 /* FLOATING WIDGETS */
-.hero-r { position: relative; height: 420px; }
+.hero-r { position: relative; height: 460px; }
 
 .fw {
   position: absolute; padding: 18px 20px; border-radius: 20px;
@@ -255,10 +255,10 @@ h1,h2,h3,h4 { font-family: var(--fh); }
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
 }
-.fw1 { top: 0;   left: 0;   width: 200px; animation: fw1f 5.5s ease-in-out infinite; border-color: rgba(68,105,255,.35); box-shadow: 0 0 0 1px rgba(68,105,255,.12) inset, 0 16px 50px rgba(68,105,255,.22); }
-.fw2 { top: 15px; right: 0; width: 190px; animation: fw2f 6.5s ease-in-out infinite .5s; border-color: rgba(0,210,140,.32); box-shadow: 0 0 0 1px rgba(0,210,140,.10) inset, 0 16px 50px rgba(0,210,140,.18); }
-.fw3 { bottom: 60px; left: 20px; width: 188px; animation: fw3f 5s ease-in-out infinite 1s; border-color: rgba(167,139,250,.3); box-shadow: 0 0 0 1px rgba(167,139,250,.10) inset, 0 16px 50px rgba(167,139,250,.18); }
-.fw4 { bottom: 5px; right: 10px; width: 175px; animation: fw4f 7s ease-in-out infinite 1.5s; }
+.fw1 { top: 0;    left: 0;   width: 200px; animation: fw1f 5.5s ease-in-out infinite;      border-color: rgba(68,105,255,.35);   box-shadow: 0 0 0 1px rgba(68,105,255,.12) inset, 0 16px 50px rgba(68,105,255,.22); }
+.fw2 { top: 20px; right: 0;  width: 190px; animation: fw2f 6.5s ease-in-out infinite .5s;  border-color: rgba(0,210,140,.32);    box-shadow: 0 0 0 1px rgba(0,210,140,.10) inset, 0 16px 50px rgba(0,210,140,.18); }
+.fw3 { top: 215px; left: 10px; width: 196px; animation: fw3f 5s ease-in-out infinite 1s;   border-color: rgba(167,139,250,.3);   box-shadow: 0 0 0 1px rgba(167,139,250,.10) inset, 0 16px 50px rgba(167,139,250,.18); }
+.fw4 { top: 240px; right: 0; width: 178px; animation: fw4f 7s ease-in-out infinite 1.5s; }
 
 @keyframes fw1f { 0%,100%{transform:translateY(0) rotate(-1.5deg)} 50%{transform:translateY(-12px) rotate(-.5deg)} }
 @keyframes fw2f { 0%,100%{transform:translateY(0) rotate(1deg)}   50%{transform:translateY(-10px) rotate(.3deg)} }
